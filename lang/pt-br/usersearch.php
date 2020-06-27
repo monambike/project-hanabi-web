@@ -71,7 +71,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!--CSS e Javascript-->
 		<link rel="stylesheet" type="text/css" href="../../css/stylemain.css">
-		<link rel="stylesheet" type="text/css" href="../../css/styleusersearch.css">
+		<link rel="stylesheet" type="text/css" href="../../css/stylesearch.css">
 		<script type="text/javascript" src="../../js/events.js" async></script>
 		<script type="text/javascript" src="../../js/jquery-3.5.1.min.js"></script>
 		<script type="text/javascript" src="../../js/colors.js" async></script>
@@ -202,10 +202,10 @@
 						?>
 						<br>
 						<br>
-						<a onmousedown="movelink('usersettings.php')">Editar Perfil</a>
+						<a onmousedown="movelink('settings.php')">Editar Perfil</a>
 						<br>
 						<hr>
-						<a onmousedown="movelink('usersearch.php')">Procurar Pessoas</a>
+						<a onmousedown="movelink('search.php')">Procurar Pessoas</a>
 						<br>
 						<br>
 						<a onmousedown="movelink('chat.php')">Entrar no Chat Público</a>

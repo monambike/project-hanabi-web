@@ -207,10 +207,10 @@
 						?>
 						<br>
 						<br>
-						<a onmousedown="movelink('usersettings.php')">Editar Perfil</a>
+						<a onmousedown="movelink('settings.php')">Editar Perfil</a>
 						<br>
 						<hr>
-						<a onmousedown="movelink('usersearch.php')">Procurar Pessoas</a>
+						<a onmousedown="movelink('search.php')">Procurar Pessoas</a>
 						<br>
 						<br>
 						<a onmousedown="movelink('chat.php')">Entrar no Chat Público</a>

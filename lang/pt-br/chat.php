@@ -80,7 +80,7 @@
 
 					while ($data = mysqli_fetch_array($result)) {
 
-					//CASO DEIXAR A SESSÃO
+					/*//CASO DEIXAR A SESSÃO
 					if(isset($_GET['logout'])){
 						//Deixa uma mensagem de que o usuário deixou a sala
 						$fp = fopen ( "../../php/chat_log.html", 'a' );
@@ -97,7 +97,7 @@
 						//Deixa uma mensagem de que o usuário entrou na sala
 						fwrite ( $fp, "<div class='msgln'><i>".htmlentities($data["userUsername"])." entrou no chat.</i><br></div>");
 							fclose ( $fp );
-					}
+					}*/
 			?>
 				<div id="div_chat_container">
 					<div id="div_top">

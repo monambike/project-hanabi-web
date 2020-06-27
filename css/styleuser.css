@@ -1,22 +1,31 @@
+/*GERAL*/
+/*Divisões Principais*/
 body{
 	background-repeat: no-repeat;
 	background-size: cover;
+	word-break: break-all;
 }
 #div_user{
+	background-color: rgba(255,255,255,1);
 	margin: 0px;
-	width: 30%;
+	height: auto;
 	position: absolute;
-	max-height: 100%;
+	text-align: center;
+	width: 30%;
 }
 #div_content{
-	background-color: blue;
+	background-color: rgba(60,60,60,1);
+	height: auto;
 	margin: 0px;
-	width: 70%;
 	margin-left: 30%;
+	padding: 20px;
 	position: absolute;
-	max-height: 100%;
+	width: 70%;
 }
+
+/*Guias*/
 #div_user_tabs ul{
+	background-color: rgba(255,255,255,1);
 	margin: 0px;
 	text-align: center;
 	padding: 15px;
@@ -31,4 +40,27 @@ body{
 #div_user_tabs ul li:hover{
 	border-bottom: 5px solid rgba(0,0,0,1);
 	cursor: pointer;
+}
+
+/*Tabela de Ícones*/
+#div_user table{
+	margin: 0px auto 0px auto;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+#div_user th{
+	background-color: rgba(0,0,0,1);
+	color: rgba(255,255,255,1);
+	padding: 5px;
+}
+#div_user td{text-align: center;}
+
+/*Imagens*/
+#pfp{
+	background-position: center;
+	border-radius: 50%;
+	border: 5px solid gray;
+	background-size: cover;
+	height: 150px;
+	width: 150px;
 }

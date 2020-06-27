@@ -3,6 +3,9 @@
 	session_name('userHanabi_online');
 	session_start();
 
+	//Usuário sendo visualizado
+	$view_user = $_GET['user'];
+
 	if(isset($_SESSION['email'])){
 		//Se estiver logado
 		echo 
@@ -11,16 +14,16 @@
 			#div_login_yes{display: all;}
 		</style>';
 
-		$getuser = "
+		$getusername = "
 			SELECT
 				userUsername
 			FROM hanabiUser
 			WHERE
 				userEmail = '".$_SESSION['email']."'
 		";
-		$result = mysqli_query($con, $getuser);
+		$username_result = mysqli_query($con, $getusername);
 		
-		while ($data = mysqli_fetch_array($result)) {
+		while ($data = mysqli_fetch_array($username_result)) {
 			echo
 			'<script>
 				if(localStorage.getItem(`query_user_result`) === null){
@@ -55,6 +58,50 @@
 				var color_default = 1;
 			</script>';
 		}else{
+			$getid = "
+				SELECT
+					userId
+				FROM hanabiUser
+				WHERE
+					userUsername = '$view_user'
+			";
+			$getid_query = mysqli_query($con, $getid);
+
+			while($data = mysqli_fetch_array($getid_query)){
+				$userId = $data["userId"];
+			}
+
+			$searcheduser_colors = "
+				SELECT
+					settingsColor1,
+					settingsColor2,
+					settingsColor3,
+					settingsColor4,
+					settingsColor5,
+					settingsColor6,
+					settingsColor7,
+					settingsColor8
+			    FROM hanabiSettings
+				WHERE
+					userId = '$userId'
+			";
+			$searcheduser_result = mysqli_query($con, $searcheduser_colors);
+
+			while ($data = mysqli_fetch_array($searcheduser_result)) {
+				//Garante que ao logar receba as cores certas
+				echo
+				"<script type='text/javascript'>
+					localStorage.setItem('color1', '".$data["settingsColor1"]."');
+					localStorage.setItem('color2', '".$data["settingsColor2"]."');
+					localStorage.setItem('color3', '".$data["settingsColor3"]."');
+					localStorage.setItem('color4', '".$data["settingsColor4"]."');
+					localStorage.setItem('color5', '".$data["settingsColor5"]."');
+					localStorage.setItem('color6', '".$data["settingsColor6"]."');
+					localStorage.setItem('color7', '".$data["settingsColor7"]."');
+					localStorage.setItem('color8', '".$data["settingsColor8"]."');
+				</script>";
+			}
+
 			echo
 			'<script>
 				var logado = 1;
@@ -86,20 +133,25 @@
 		<link rel="icon" type="image/x-icon" href="../../images/hanabi.png">
 		<link rel="shortcut icon" type="image/x-icon" href="../../images/hanabi.png">
 	</head>
-	<body onload="localStorage.setItem('account_was_open', 'false'); verify_account_state(); localStorage.setItem('language', 'pt-br'); changeimage2(); colorSet(); waitCompleteLoad();">
+	<?php
+		$getbackground = "
+			SELECT
+				userBackground
+			FROM hanabiUser
+			WHERE
+				userId = '$userId'
+		";
+		$result_background = mysqli_query($con, $getbackground);
+
+		while ($data = mysqli_fetch_array($result_background)) {
+	?>
+	<body onload="localStorage.setItem('account_was_open', 'false'); verify_account_state(); localStorage.setItem('language', 'pt-br'); changeimage2(); colorSet(); waitCompleteLoad();" style='background-image: url("data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data['userBackground']); ?>")'>
+	<?php
+		}
+	?>
 		<div id=loadContent>
 			<a id="top" hidden></a>
 			<a id="link_to_top" href="#top"><img id="img_goup" src="../../images/goup1.png" onmouseover="changeimage1()" onmouseout="changeimage2()"></a>
-			<?php
-				if(isset($_SESSION['email'])){
-			?>
-					<div>
-						<iframe id="iframe_chat" src="chat.php" style="display: none;" scrolling="no"></iframe>
-						<button id="btn_iframe" class="btn_button" onmousedown="interactIframe()">Chat</button>
-					</div>
-			<?php
-				}
-			?>
 			<div style="background-color: rgba(255,255,255,0.85);">
 				<header>
 					<div id="div_main">
@@ -186,33 +238,43 @@
 					<!--Logado-->
 					<div id="div_login_yes">
 						<?php
+							$getuser = "
+								SELECT
+									userName,
+									userUsername,
+									userPhoto
+								FROM hanabiUser
+								WHERE
+									userEmail = '".$_SESSION['email']."'
+							";
+							$result = mysqli_query($con, $getuser);
 							while ($data = mysqli_fetch_array($result)) {
 								if($data['userPhoto']){
-									echo '<a onmousedown="movelink(`user.php?='.$data['userUsername'].'`)"><img style="background-image: url(data:image/jpg;charset=utf8;base64,'.base64_encode($data['userPhoto']).')"></a>';
+									echo '<a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)"><img style="background-image: url(data:image/jpg;charset=utf8;base64,'.base64_encode($data['userPhoto']).')"></a>';
 								}else{
 
-									echo '<a onmousedown="movelink(`user.php?='.$data['userUsername'].'`)"><img style="background-image: url(../../images/usericon.png)"></a>';
+									echo '<a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)"><img style="background-image: url(../../images/usericon.png)"></a>';
 
 								}
 
 								echo '
 								<br>
 								<br>
-								<a onmousedown="movelink(`user.php?user=Monambike`)"><span>'.htmlentities($data['userName']).'</span></a>
+								<a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)"><span>'.htmlentities($data['userName']).'</span></a>
 								<br>
-								<a onmousedown="movelink(`user.php?user=Monambike`)"><span>('.htmlentities($data['userUsername']).')</span></a>
+								<a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)"><span>('.htmlentities($data['userUsername']).')</span></a>
 								<br>
 								<br>
 								<hr>
-								<a onmousedown="movelink(`user.php?user=Monambike`)">Meu Perfil</a>';
+								<a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)">Meu Perfil</a>';
 							}
 						?>
 						<br>
 						<br>
-						<a onmousedown="movelink('usersettings.php')">Editar Perfil</a>
+						<a onmousedown="movelink('settings.php')">Editar Perfil</a>
 						<br>
 						<hr>
-						<a onmousedown="movelink('usersearch.php')">Procurar Pessoas</a>
+						<a onmousedown="movelink('search.php')">Procurar Pessoas</a>
 						<br>
 						<br>
 						<a onmousedown="movelink('chat.php')">Entrar no Chat Público</a>
@@ -230,24 +292,22 @@
 					<div>
 						<div id="div_user">
 							<?php
-								$view_user = $_GET['user'];
-
 								$user_search = "
-								SELECT
-									userName,
-									userSurname,
-									userUsername,
-									userEmail,
-									userCountry,
-									userGender,
-									userPhone,
-									userCellphone,
-									userBio,
-									userPhoto,
-									userRegistertime
-								FROM hanabiUser
-								WHERE
-									userUsername = '$view_user'
+									SELECT
+										userName,
+										userSurname,
+										userUsername,
+										userEmail,
+										userCountry,
+										userGender,
+										userPhone,
+										userCellphone,
+										userBio,
+										userPhoto,
+										userRegistertime
+									FROM hanabiUser
+									WHERE
+										userUsername = '$view_user'
 								";
 								$result_search = mysqli_query($con,$user_search);
 								$results = mysqli_num_rows($result_search);
@@ -256,10 +316,62 @@
 									//Mostra o usuário
 									while ($data = mysqli_fetch_array($result_search)) {
 										if($data['userPhoto']){
-											echo '<img src="data:image/jpg;charset=utf8;base64, '.base64_encode($data['userPhoto']).'">';
+											echo '<img id="pfp" src="data:image/jpg;charset=utf8;base64, '.base64_encode($data['userPhoto']).'">';
 										}else{
-											echo '<img src="../../images/usericon.png">';	
+											echo '<img id="pfp" src="../../images/usericon.png">';
 										}
+										?>
+										<br>
+										<br>
+										<span>Registrado(a) em: <?php echo htmlentities($data['userRegistertime']); ?></span>
+										<br>
+										<br>
+										<span><?php echo htmlentities($data['userName']) ?></span>
+										<br>
+										<span><?php echo htmlentities($data['userSurname']) ?></span>
+										<br>
+										<span>(<?php echo htmlentities($data['userUsername']); ?>)</span>
+										<br>
+										<br>
+										<br>
+										<?php
+											echo
+											'<table>
+												<tr>
+													<td><img src="../../images/flags/'.$data['userCountry'].'.png" class="ico_account"></td>
+													<td><img src="../../images/genders/'.$data['userGender'].'.png" class="ico_account"></td>
+												</tr>
+												<tr>
+													<td>PAÍS</td>
+													<td>GÊNERO</td>
+												</tr>
+											</table>';
+										?>
+										<br>
+										<br>
+										<br>
+										<label>Email:</label>
+										<br>
+										<span><?php echo htmlentities($data['userEmail']) ?></span>
+										<br>
+										<br>
+										<br>
+										<label>Telefone:</label>
+										<br>
+										<span><?php echo htmlentities($data['userPhone']) ?></span>
+										<br>
+										<br>
+										<br>
+										<label>Celular:</label>
+										<br>
+										<span><?php echo htmlentities($data['userCellphone']) ?></span>
+										<br>
+										<br>
+										<br>
+										<label>Biografia:</label>
+										<br>
+										<span><?php echo htmlentities($data['userBio']) ?></span>
+										<?php
 									}
 								}else{
 									echo
@@ -271,7 +383,63 @@
 								mysqli_close($con);
 							?>
 						</div>
-						<div id="div_content">						
+						<div id="div_content">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
 						</div>
 					</div>
 				</section>

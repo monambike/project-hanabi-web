@@ -94,7 +94,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!--CSS e Javascript-->
 		<link rel="stylesheet" type="text/css" href="../../css/stylemain.css">
-		<link rel="stylesheet" type="text/css" href="../../css/styleusersettings.css">
+		<link rel="stylesheet" type="text/css" href="../../css/stylesettings.css">
 		<script type="text/javascript" src="../../js/events.js" async></script>
 		<script type="text/javascript" src="../../js/jquery-3.5.1.min.js"></script>
 		<script type="text/javascript" src="../../js/colors.js" async></script>
@@ -128,6 +128,9 @@
 						<?php
 							}
 						?>
+						<br>
+						<br>
+						<span class="txt_settings_text">Registrado(a) em: <?php echo htmlentities($data['userRegistertime']); ?></span>
 						<br>
 						<br>
 						<input class="btn_button input_file" type="file" name="pfp">
