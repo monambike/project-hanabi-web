@@ -258,8 +258,24 @@
 										if($data['userPhoto']){
 											echo '<img src="data:image/jpg;charset=utf8;base64, '.base64_encode($data['userPhoto']).'">';
 										}else{
-											echo '<img src="../../images/usericon.png">';	
+											echo '<img src="../../images/usericon.png">';
 										}
+										?>
+										<label>Nome:</label>
+										<span><?php echo htmlentities($data['userName']) ?></span>
+										<label>Sobrenome:</label>
+										<span><?php echo htmlentities($data['userSurname']) ?></span>
+										<label>Usuário:</label>
+										<span><?php echo htmlentities($data['userUsername']); ?></span>
+										<label>Email:</label>
+										<span><?php echo htmlentities($data['userEmail']) ?></span>
+										<label>Telefone:</label>
+										<span><?php echo htmlentities($data['userPhone']) ?></span>
+										<label>Cellphone:</label>
+										<span><?php echo htmlentities($data['userCellphone']) ?></span>
+										<label>Biografia:</label>
+										<span><?php echo htmlentities($data['userBio']) ?></span>
+										<?php
 									}
 								}else{
 									echo
