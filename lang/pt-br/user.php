@@ -51,6 +51,18 @@
 		$colors_result = mysqli_query($con, $getcolors);
 		$colors_rows = mysqli_num_rows($colors_result);
 
+		$getid = "
+			SELECT
+				userId
+			FROM hanabiUser
+			WHERE
+				userUsername = '$view_user'
+		";
+		$getid_query = mysqli_query($con, $getid);
+
+		while($data = mysqli_fetch_array($getid_query)){
+			$userId = $data["userId"];
+		}
 		if($colors_rows > 0){
 			echo
 			'<script>
@@ -58,19 +70,6 @@
 				var color_default = 1;
 			</script>';
 		}else{
-			$getid = "
-				SELECT
-					userId
-				FROM hanabiUser
-				WHERE
-					userUsername = '$view_user'
-			";
-			$getid_query = mysqli_query($con, $getid);
-
-			while($data = mysqli_fetch_array($getid_query)){
-				$userId = $data["userId"];
-			}
-
 			$searcheduser_colors = "
 				SELECT
 					settingsColor1,
@@ -134,6 +133,8 @@
 		<link rel="shortcut icon" type="image/x-icon" href="../../images/hanabi.png">
 	</head>
 	<?php
+
+
 		$getbackground = "
 			SELECT
 				userBackground
