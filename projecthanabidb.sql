@@ -40,6 +40,7 @@ CREATE TABLE hanabiComments(
 	commentsId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	commentsPage VARCHAR(15),
 	commentsComment VARCHAR(200),
+	commentData DATETIME,
 	userId INT,
     FOREIGN KEY (userId) REFERENCES hanabiUser(userId)
 );
