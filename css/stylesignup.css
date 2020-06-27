@@ -1,0 +1,37 @@
+/*GERAL*/
+/*Divisões Principais*/
+body{
+	background-image: url(../images/backgrounds/accessories.jpg);
+	background-repeat: repeat;
+}
+.div_content{
+	padding: 50px 0px 50px 0px;
+	text-align: center;
+}
+div.div_content form{
+	display: inline-block;
+	text-align: right;
+	width: auto;
+}
+
+/*Imagens*/
+#form_register img{
+	display: inline;
+	height: 32px;
+	vertical-align: middle;
+	width: 32px;
+}
+
+/*Botões*/
+#btn_signup{width: 110px;}
+
+/*Textos*/
+#txt_notice{color: red;}
+
+/*PARA DISPOSITIVOS COM LARGURA MÁXIMA DE 600px*/
+@media only screen and (max-width: 600px){
+}
+
+/*PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 600px*/
+@media only screen and (min-width: 600px){
+}

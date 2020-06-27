@@ -1,0 +1,373 @@
+/*GERAL*/
+/*Divisões principais*/
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+header{
+	background: rgba(0,0,0,1);
+	color: rgba(255,255,255,1);
+	font-family: Arial, Helvetica, sans-serif;
+	height: 150px;
+	padding: 10px;
+}
+div#div_main{
+	float: left;
+	text-align: left;
+	width: 75%;
+}
+.div_content{background-color: rgba(255,255,255,1);}
+footer{
+	background: rgba(0,0,0,1);
+	color: rgba(255,255,255,1);
+	margin: 0px;
+	padding: 5px;
+	text-align: center;
+}
+footer p{margin: 0px;}
+#loadContent{display: none;}
+
+/*Guia de navegação no celular*/
+.div_sidebar_class{
+	background-color: rgba(0,0,0,1);
+	height: 100%;
+	left: 0;
+	overflow-x: hidden;
+	padding-top: 60px;
+	position: fixed;
+	top: 0;
+	transition: 0.5s;
+	width: 0;
+	z-index: 1;
+}
+.div_sidebar_class a, #div_sidebar_id span{
+	color: rgba(255,255,255,1);
+	display: block;
+	font-size: 25px;
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	transition: 0.3s;
+}
+.div_sidebar_class .btn_closenav{
+	font-size: 36pt;
+	position: absolute;
+	top: 0;
+}
+.btn_opennav{
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+	background-color: rgba(0,0,0,1);
+	border: none;
+	font-size: 18pt;
+	padding: 10px 15px;
+	position: fixed;
+	text-align: left;
+	width: 100%;
+}
+#div_navphone{transition: margin-left .5s;}
+.btn_opennav:hover{background-color: rgba(60,60,60,1);}
+.div_sidebar_class hr{margin: 54px 8px 0px 8px;}
+/*Guias de navegação*/
+nav{
+	background-color: rgba(0,0,0,1);
+	color: rgba(255,255,255,1);
+}
+nav#nav_menu ul{
+	margin: 0px;
+	padding: 0;
+	text-align: center;
+}
+nav#nav_menu a
+{
+	color: rgba(255,255,255,1);
+	padding: 5px;
+	text-decoration: none;
+}
+nav#nav_menu ul li{
+	display: inline-block;
+	list-style: none;
+}
+
+/*Mudar idioma*/
+nav#nav_language{
+	float: right;
+	margin-right: 0%;
+	text-align: center;
+	width: 15%;
+}
+nav#nav_language ul{
+	padding: 0;
+	list-style: none; 
+}
+nav#nav_language ul li a{padding: 0px 2px 0px 2px;}
+
+/*Login*/
+#div_login_no, #div_login_yes{
+	background-color: rgba(0,0,0,0.9);
+	color: rgba(255,255,255,1);
+	padding: 15px;
+	padding-bottom: 40px;
+}
+#form_login .btn_button{
+	float: left;
+	width: 80px;
+}
+#div_account_switch{
+	background-color: rgba(0,0,0,1);
+	font-size: 16pt;
+	padding: 5px;
+}
+#div_account{display: none;}
+/*Não logado*/
+label{
+	font-size: 12pt;
+	text-transform: uppercase;
+	width: 60px;
+}
+.txt_textbox{
+	border-radius: 5px;
+	font-size: 12pt;
+	margin-right: 20px;
+	padding: 2px;
+}
+#txt_signup{
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+	margin-top: 5px;
+	text-decoration: none;
+}
+#txt_forgot{
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+	float: left;
+	margin-top: 5px;
+	text-decoration: none;
+}
+/*Logado*/
+#div_login_yes{text-align: center;}
+#div_login_yes a{text-decoration: none;}
+#div_login_yes img{
+	background-position: center;
+	border-radius: 50%;
+	border: 5px solid gray;
+	background-size: cover;
+	height: 100px;
+	width: 100px;
+}
+
+/*Textos*/
+/*"Projeto Hanabi"*/
+h1{
+	font-size: 30pt;
+	padding-bottom: 5px;
+	text-align: center;
+}
+h1:hover{cursor: pointer;}
+/*Primeiro título da seção*/
+h2{
+	background-color: rgba(15,15,15,1);
+	color: rgba(255,255,255,1);
+	text-align: center;
+}
+/*Títulos presentes na section*/
+h3{margin: 0px 0px 5px 0px;}
+/*Idioma e conta*/
+h4{
+	background: rgba(0,0,0,1);
+	border-radius: 5px;
+	margin: 0px 0px 20px 0px;
+	font-size: 14pt;
+	padding: 5px;
+	text-align: center;
+}
+h5{font-size: 12pt;}
+
+/*Ir para o topo*/
+#img_goup{
+	cursor: pointer;
+	background-color: rgba(137,0,179,1);
+	border-radius: 20px;
+	bottom: 4%;
+	display: block;
+	margin: auto 20px 20px auto;
+	position: fixed;
+	right: 0%;
+	width: 70px;
+	height: 70px;
+}
+
+/*Botões*/
+.btn_button{
+	border-radius: 2px;
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+	font-weight: bold;
+	padding: 5px;
+	text-transform: uppercase;
+	/*Cor*/
+	border-top: 5px solid rgba(201,26,255,1);
+	border-right: 5px solid rgba(87,0,109,1);
+	border-bottom: 5px solid rgba(87,0,109,1);
+	border-left: 5px solid rgba(201,26,255,1);
+	background-color: rgba(201,26,255,1);
+}
+.btn_button:hover{
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+	/*Cor*/
+	border-top: 5px solid rgba(137,0,179,1);
+	border-right: 5px solid rgba(39,0,51,1);
+	border-bottom: 5px solid rgba(39,0,51,1);
+	border-left: 5px solid rgba(137,0,179,1);
+	background-color: rgba(137,0,179,1);
+}
+.btn_button:active{
+	color: rgba(0,0,0,1);
+	/*Cor*/
+	border-top: 5px solid rgba(255,255,255,1);
+	border-right: 5px solid gray;
+	border-bottom: 5px solid gray;
+	border-left: 5px solid rgba(255,255,255,1);
+	background-color: rgba(255,255,255,1);
+}
+
+/*Links*/
+/*Default*/
+#div_about a,
+#div_account_switch a,
+#div_login_yes a,
+#nav_language a,
+#nav_menu a,
+#txt_forgot,
+#txt_signup,
+.item,
+#div_sidebar_id a{
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+}
+/*Hover*/
+#div_about a:hover,
+#div_account_switch a:hover,
+#div_login_yes a:hover,
+#nav_language a:hover,
+#nav_menu a:hover,
+#txt_forgot:hover,
+#txt_signup:hover,
+.item:hover,
+#div_sidebar_id a:hover{color: rgba(201,26,255,1);}
+/*Active*/
+#div_about a:active,
+#div_account_switch a:active,
+#div_login_yes a:active,
+#nav_language a:active,
+#nav_menu a:active,
+#txt_forgot:active,
+#txt_signup:active,
+.item:active,
+#div_sidebar_id a:active{color: rgba(220,110,255,1);}
+/*Selecionados*/
+#div_about a.txt_selected,
+#div_account_switch a.txt_selected,
+#div_login_yes a.txt_selected,
+#nav_language a.txt_selected,
+#nav_menu a.txt_selected,
+#txt_forgot.txt_selected,
+#txt_signup.txt_selected,
+.item.txt_selected,
+#div_sidebar_id a.txt_selected{color: rgba(137,0,179,1);}
+
+/*Chat*/
+#btn_iframe{
+	bottom: 0px;
+	position: fixed;
+}
+#iframe_chat{
+	border: 5px;
+	height: 100%;
+	position: fixed;
+}
+
+/*PARA DISPOSITIVOS COM LARGURA MÁXIMA DE 600px*/
+@media only screen and (max-width: 600px){
+	/*Divisões principais*/
+	.div_content{margin: 0px;}
+
+	/*Navegação no celular*/
+	#div_navphone, #div_sidebar_id{display: block;}
+	/*Navegação*/
+	header, #nav_menu{display: none;}
+
+	/*Mudar idioma*/
+	#nav_language h4{word-break: break-all;}
+	#nav_language span{display: none;}
+
+	/*Login*/
+	#div_login_no{
+		border: 0px;
+		margin: 0px;
+	}
+	#div_account_switch{
+		padding-top: 109px;
+		text-align: center;
+	}
+
+	/*Textos*/
+	h2{
+		margin: 0px;
+		padding: 15px;
+		text-align: center;
+		word-break: break-all;
+	}
+	.txt_textbox{width: 80%;}
+
+	/*Ir para o topo*/
+	#img_goup{opacity: 1;}
+
+	/*Chat*/
+	#btn_iframe{width: 100%;}
+	#iframe_chat{width: 100%;}
+}
+
+/*PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 600px*/
+@media only screen and (min-width: 600px){
+	/*Divisões principais*/
+	.div_content{margin: 0px 20% 0px 20%;}
+
+	/*Navegação no celular*/
+	#div_navphone, #div_sidebar_id{display: none;}
+	/*Navegação*/
+	header, #nav_menu{display: block;}
+
+	/*Login*/
+	#div_login_no, #div_login_yes{
+		border-bottom-left-radius: 5px;
+		margin-left: auto;
+		width: 300px;
+	}
+	#div_account_switch{text-align: right;}
+	#txt_signup{float: right;}
+	.txt_textbox{width: 100%;}
+
+	/*Textos*/
+	h2{
+		border-radius: 4px;
+		font-size: 20pt;
+		margin: 100px 20% 0px 20%;
+		padding: 20px;
+	}
+
+	/*Imagens*/
+	section a img{
+	  border: 2px solid rgba(220,110,255,1);
+	  border-radius: 3px;
+	}
+	section a img:hover{
+	  border: 2px solid rgba(201,26,255,1);
+	  border-radius: 3px;
+	}
+
+	/*Chat*/
+	#btn_iframe{width: 30%;}
+	#iframe_chat{width: 30%;}
+}

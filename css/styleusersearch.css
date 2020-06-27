@@ -1,0 +1,51 @@
+/*GERAL*/
+/*Diviisões principais*/
+body{
+	background-image: url(../images/backgrounds/search.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.div_content{
+	padding: 50px 0px 50px 0px;
+	text-align: center;
+}
+/*Pequisa*/
+.div_content input{
+	padding: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+#ul_search{margin: 0px;padding: 0px;}
+.query{text-decoration: none;}
+.div_content ul li{
+	background-color: rgba(30,30,30,1);
+	border-style: double;
+	color: rgba(255,255,255,1);
+	font-size: 18pt;
+	list-style: none;
+	max-width: 100%;
+	padding: 15px;
+}
+.div_content ul li img{
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+}
+#div_pfp{
+	margin: 0px;
+	float: left;
+	margin-top: -10px;
+	width: 50px;
+}
+#div_query{
+	margin: 0px;
+	margin-left: 50px;
+}
+
+/*PARA DISPOSITIVOS COM LARGURA MÁXIMA DE 600px*/
+@media only screen and (max-width: 600px){
+}
+
+/*PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 600px*/
+@media only screen and (min-width: 600px){
+}

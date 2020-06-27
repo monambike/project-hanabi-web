@@ -1,0 +1,23 @@
+/*GERAL*/
+/*Divisões principais*/
+body{
+	background-image: url(../images/backgrounds/questionmark.jpg);
+	background-repeat: repeat;
+}
+.div_content{
+	padding: 50px 0px 50px 0px;
+	text-align: center;
+}
+div.div_content form{
+	display: inline-block;
+	margin: 0px auto 0px auto;
+	text-align: right;
+}
+
+/*PARA DISPOSITIVOS COM LARGURA MÁXIMA DE 600px*/
+@media only screen and (max-width: 600px){
+}
+
+/*PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 600px*/
+@media only screen and (min-width: 600px){
+}

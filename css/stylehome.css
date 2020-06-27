@@ -1,0 +1,123 @@
+/*GERAL*/
+/*Divisões principais*/
+body{
+	background-image: url(../images/backgrounds/panda.jpg);
+	background-repeat: repeat;
+}
+
+/*Blocos dentro da section*/
+#div_blockone{padding: 0px 0px 20px 0px;}
+#div_blockbackground{
+	background-image: url(../images/backgrounds/space.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0px; 
+	padding: 0px;
+}
+#div_blocktwo{
+	background-color: rgba(39,0,51,0.7);
+	color: rgba(255,255,255,1);
+	padding: 20px;
+}
+#div_blocktwo h2{
+	color: rgba(255,255,255,1);
+	font-size: 20pt;
+	margin: 0px 0px 30px 0px;
+	padding: 20px;
+	text-align: center;
+}
+#div_blockthree{
+	padding: 20px;
+	text-align: center;
+}
+.div_seravisto{
+	background-color: rgba(39,0,51,0.9);
+	height: auto;
+	padding: 15px;
+}
+#div_about{
+	background-color: rgba(0,0,0,1);
+	color: rgba(255,255,255,1);
+	padding: 10px;
+	text-align: justify;
+}
+
+/*Imagens*/
+.img_icons{
+	height: 100px;
+	width: 100px;
+}
+#img_girlbrowsing{
+	display: block;
+	margin: 30px auto 5px auto;
+	width: 50%;
+}
+
+/*Textos*/
+#disclaimer{
+	background-color: rgba(255,0,0,1);
+	color: rgba(255,255,255,1);
+	padding: 5px;
+	text-align: center;
+}
+
+/*PARA DISPOSITIVOS COM LARGURA MÁXIMA DE 600px*/
+@media only screen and (max-width: 600px){
+	/*Textos*/
+	#disclaimer{
+		margin: 0px;
+		word-break: break-all;
+	}
+
+	/*Divisões principais*/
+	#div_about{
+		border-radius: 0px;
+		margin: 0px;
+	}
+	.div_seravisto{word-break: break-all;}
+
+	/*Imagens*/
+	#img_girlbrowsing{
+		border-radius: 0px;
+		margin: 0px;
+		width: 100%;
+	}
+}
+
+/*PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 600px*/
+@media only screen and (min-width: 600px){
+	/*Textos*/
+	#disclaimer{
+		border-radius: 50px;
+		margin: 0px 20% 0px 20%;
+	}
+
+	/*Blocos dentro da section*/
+	#div_about{
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+	.div_seravisto{
+		margin-bottom: 2%;
+		margin-top: 2%;
+	}
+
+	/*Escolhendo os lados dos divs*/
+	.div_seravisto.left{
+		margin-right: 40%;
+		text-align: left;
+	}
+	.div_seravisto.right{
+		margin-left: 40%;
+		text-align: right;
+	}
+
+	/*Imagens*/
+	#img_girlbrowsing{
+		border-radius: 10px;
+		margin: 30px auto 5px auto;
+		width: 50%;
+	}
+}

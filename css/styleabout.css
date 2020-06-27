@@ -1,0 +1,48 @@
+/*GERAL*/
+/*Divisões principais*/
+body{
+	background-image: url(../images/backgrounds/greenolives.jpg);
+	background-repeat: repeat;
+}
+
+/*Textos*/
+.div_content p{
+	margin-top: 0px;
+	text-align: justify;
+}
+
+/*Imagens*/
+.div_content img{
+	display: block;
+	margin: auto;
+	margin-bottom: 40px;
+	max-width: 100%;
+	max-height: 100%;
+}
+.div_content h6:first-child{
+	margin-top: 0px;
+	padding-top: 15px;
+}
+.div_content li:before {
+	content: "\1F4CC";
+	margin-left: -20px;
+	margin-right: 10px;
+}
+
+h6{
+	font-size: 12pt;
+	font-style: bold;
+}
+
+/*PARA DISPOSITIVOS COM LARGURA MÁXIMA DE 600px*/
+@media only screen and (max-width: 600px){
+	/*Textos*/
+	.div_content p{padding: 5px;}
+	.div_content img{margin-bottom: 0px;}
+}
+
+/*PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 600px*/
+@media only screen and (min-width: 600px){
+	/*Divisões principais*/
+	.div_content{padding: 20px 20px 40px 20px;}
+}

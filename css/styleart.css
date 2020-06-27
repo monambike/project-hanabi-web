@@ -1,0 +1,30 @@
+/*GERAL*/
+/*Divisões Principais*/
+body{
+	background-image: url(../images/backgrounds/abstracttexture.jpg);
+	background-repeat: repeat;
+}
+.div_content{text-align: center;}
+.div_content img{max-width: 100%;}
+.div_description{
+	padding: 15px;
+	text-align: center;
+}
+
+/*Textos*/
+p{text-align: center;}
+
+/*PARA DISPOSITIVOS COM LARGURA MÁXIMA DE 600px*/
+@media only screen and (max-width: 600px){
+	p{
+		margin-top: 0px;
+		padding-top: 15px;
+	}
+}
+
+/*PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 600px*/
+@media only screen and (min-width: 600px){
+	/*Divisões Principais*/
+	.div_content{padding-top: 3%;}
+	.div_gallery{margin: 0px 5% 0px 5%;}
+}

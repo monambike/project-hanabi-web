@@ -1,0 +1,67 @@
+/*GERAL*/
+/*Divisões principais*/
+body{
+	background-image: url(../images/backgrounds/abstractvector.jpg);
+	background-repeat: repeat;
+}
+.div_content{padding: 20px;}
+
+/*Div para cada jogo*/
+.div_game{
+	height: auto;
+	padding: 15px;
+}
+.div_image img{
+	height: 150px;
+	width: 150px;
+}
+.div_text{
+	height: auto;
+	padding: 10px;
+}
+
+/*Conquistas*/
+.div_achievements{
+	background-color: rgba(201,26,255,1);
+	color: rgba(255,255,255,1);
+	border-radius: 5px;
+	height: auto;
+	margin-top: 5px;
+	padding: 5px;
+	text-align: center;
+	vertical-align: middle;
+}
+.img_achievements{
+	display: inline;
+	height: 40px;
+	width: 40px;
+}
+.progressbar_achievements{
+	display: inline-block;
+	height: 20px;
+	margin-right: 20px;
+	width: 200px;	
+}
+
+/*Escolhendo o lado dos divs referentes à imagens*/
+.div_image.left{float: left;}
+.div_image.right{float: right;}
+/*Escolhendo o lado dos divs referentes à textos*/
+.div_text.left{margin-left: 170px;}
+.div_text.right{margin-right: 170px;}
+
+/*Textos*/
+p{text-align: justify;}
+h3{
+	color: rgba(255,255,255,1);
+	background-color: rgba(39,0,51,1);
+	padding: 10px;
+}
+
+/*PARA DISPOSITIVOS COM LARGURA MÁXIMA DE 600px*/
+@media only screen and (max-width: 600px){
+}
+
+/*PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 600px*/
+@media only screen and (min-width: 600px){
+}

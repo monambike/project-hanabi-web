@@ -1,0 +1,77 @@
+/*GERAL*/
+/*Divisões Principais*/
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	margin: 0px;
+	text-align: center;
+}
+section{padding: auto 0px auto 0px;}
+div:nth-child(2){background-color: rgba(180,80,255,1);}
+div:nth-child(3){
+	background-color: rgba(39,0,51,1);
+	color: rgba(180,120,255,1);
+	padding: 5px;
+}
+
+/*Textos*/
+h1{
+	background-color: rgba(255,0,0,1);
+	color: rgba(255,255,255,1);
+	cursor: help;
+	font-size: 32pt;
+	font-weight: bold;
+	margin: 0px;
+	padding: 20px;
+}
+h2{margin-bottom: 40px;}
+h3{
+	color: rgba(255,255,255,1);
+	font-size: 18pt;
+	margin: 0px;
+	padding: 20px;
+}
+
+/*Imagens*/
+img{
+	border-radius: 5px;
+	margin: 30px 0px 30px 0px;
+	max-width: 100%;
+}
+
+/*Botões*/
+.btn_button{
+	border-radius: 2px;
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+	font-size: 16pt;
+	font-weight: bold;
+	margin-top: 30px;
+	padding: 5px;
+	text-transform: uppercase;
+	/*Cor*/
+	border-top: 5px solid rgba(201,26,255,1);
+	border-right: 5px solid rgba(87,0,109,1);
+	border-bottom: 5px solid rgba(87,0,109,1);
+	border-left: 5px solid rgba(201,26,255,1);
+	background-color: rgba(201,26,255,1);
+}
+.btn_button:hover{
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+	/*Cor*/
+	border-top: 5px solid rgba(137,0,179,1);
+	border-right: 5px solid rgba(39,0,51,1);
+	border-bottom: 5px solid rgba(39,0,51,1);
+	border-left: 5px solid rgba(137,0,179,1);
+	background-color: rgba(137,0,179,1);
+}
+.btn_button:active{
+	color: rgba(0,0,0,1);
+	/*Cor*/
+	border-top: 5px solid rgba(255,255,255,1);
+	border-right: 5px solid gray;
+	border-bottom: 5px solid gray;
+	border-left: 5px solid rgba(255,255,255,1);
+	background-color: rgba(255,255,255,1);
+}
