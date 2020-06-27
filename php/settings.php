@@ -30,7 +30,7 @@
     	WHERE
 			userId='".$_SESSION['id']."'
 	";
-	$query=mysqli_query($con, $update);
+	$query = mysqli_query($con, $update);
 
 	//Pesquisa
 	if(isset($_POST["src_options"])){
@@ -44,7 +44,7 @@
 			WHERE
 				userId='".$_SESSION['id']."'
 		";
-		$query=mysqli_query($con, $update);
+		$query = mysqli_query($con, $update);
 	}
 	//Visualização
 	if(isset($_POST["see_options"])){
@@ -58,7 +58,7 @@
 			WHERE
 				userId='".$_SESSION['id']."'
 		";
-		$query=mysqli_query($con, $update);
+		$query = mysqli_query($con, $update);
 	}
 
 	echo
