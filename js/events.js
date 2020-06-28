@@ -50,7 +50,7 @@ function movelink(navigation){
 		}else if(navigation == 'return'){
 			window.history.back();
 		}else{
-			if(navigation == 'signup.php' || navigation == 'forgot.php' || navigation == 'user.php' || navigation == 'usersettings.php' || navigation == 'usersearch.php' || navigation == 'chat.php'){
+			if(navigation == 'signup.php' || navigation == 'forgot.php' || navigation == 'user.php' || navigation == 'settings.php' || navigation == 'search.php' || navigation == 'chat.php'){
 				//Ao clicar em 'signup' ou 'forgot', ou em algum dos itens presentes em 'conta' ele fecha a aba de conta, para otimizar a experiência do usuário
 				localStorage.setItem('account_was_open', 'false');
 			}
