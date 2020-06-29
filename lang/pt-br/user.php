@@ -146,7 +146,7 @@
 
 		while ($data = mysqli_fetch_array($result_background)) {
 	?>
-	<body onload="localStorage.setItem('account_was_open', 'false'); verify_account_state(); localStorage.setItem('language', 'pt-br'); changeimage2(); colorSet(); waitCompleteLoad();" style='background-image: url("data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data['userBackground']); ?>")'>
+	<body onload="bodyLoadFunction('language', 'pt-br', 1)" style='background-image: url("data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data['userBackground']); ?>")'>
 	<?php
 		}
 	?>
@@ -445,6 +445,12 @@
 					</div>
 				</section>
 			</div>
+		</div>
+		<div id="div_cookies" style="display: none;">
+			Utilizando o nosso site e continuando a navegar vamos entender que você aceita a nossa política de <a href="http://localhost/projecthanabi_web/info/cookies.html" target="_blank">cookies</a>. Caso queira saber mais sobre <a href="http://localhost/projecthanabi_web/info/cookies.html" target="_blank">cookies</a>, como usamos e a nossa política clique no link exibido.</a>
+			<br>
+			<br>
+			<button class="btn_button" onmousedown="setCookie('terms_of_cookie', 'allowed', 365)">Fechar</button>
 		</div>
 	</body>
 </html>

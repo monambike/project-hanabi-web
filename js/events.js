@@ -17,6 +17,8 @@ function movelink(navigation){
 			var confirm = document.getElementById('signup_txt_confirm').value;
 			//Aviso
 			var notice = document.getElementById('txt_notice');
+			//Termos de uso e serviço
+			var terms = document.getElementById('terms_of_use');
 
 			//Verifica se os dados estão em um formato correto
 			if(name === "" || surname === "" || username === "" || email === "" || password === "" || confirm === ""){
@@ -27,7 +29,10 @@ function movelink(navigation){
 				//Verifica se a senha está igual ao campo de senha confirmada, caso não esteja, emite uma mensagem
 				notice.innerHTML = "Campo 'senha' diferente do campo <br> 'confirmar senha'.";
 				notice.hidden = false;
-			}else if(email.includes('@') && email.includes('.com')){
+			}else if(terms.checked === false){
+				notice.innerHTML = "Você precisa aceitar os termos de uso antes de cadastrar.";
+				notice.hidden = false;
+			}else if(email.includes('@')){
 				//Caso todos os pedidos sejam atendidos, envia o formulário
 				document.getElementById('form_register').submit();
 			}else{
@@ -138,7 +143,7 @@ function transferColor(transfered_color){
 
 //Faz com que o site só seja mostrado com javascript ativado ou com ele carregado por completo
 function waitCompleteLoad(){
-	document.getElementById('loadContent').style.display= 'block';
+	document.getElementById('loadContent').style.display = 'block';
 }
 
 //SONS
@@ -360,4 +365,63 @@ function interactIframe(){
 			menubar.style.display = "block";
 		}
 	}
+}
+
+function setCookie(cname, cvalue, exdays) {
+	var d = new Date();
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	var expires = "expires="+d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+
+	checkCookiesAllowed();
+}
+
+function getCookie(cname) {
+	var name = cname + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+
+	for(var i = 0; i <ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+
+function checkCookiesAllowed(){
+	var terms = getCookie("terms_of_cookie");
+	var divcookie = document.getElementById("div_cookies");
+
+	//Se o usuário não concordou com os cookies
+	if (terms === ""){
+		divcookie.style.display = "block";
+	//Se o usuário concordou com os cookies
+	}else{
+		divcookie.style.display = "none";
+	}
+}
+
+function bodyLoadFunction(lang, locate, type){
+	//Verifica o estado da aba de abrir conta
+	verify_account_state();
+	//Define o idioma da página
+	localStorage.setItem(lang, locate);
+	//Atualiza o botão de ir ao topo
+	changeimage2();
+	//Checa se o usuário entendeu a política de cookies
+	checkCookiesAllowed();
+
+	//Funções carregadas para partes do site específicas
+	if(type === 1){
+		//Define as cores caso o usuário tenha definido
+		colorSet();
+	}
+
+	//Depois de tudo carregado carrega o body
+	waitCompleteLoad();
 }

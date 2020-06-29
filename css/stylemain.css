@@ -288,6 +288,26 @@ h5{font-size: 12pt;}
 	position: fixed;
 }
 
+/*Cookies*/
+#div_cookies{
+	bottom: 0px;
+	color: rgba(255,255,255,1);
+	padding: 5px;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	word-break: break-all;
+}
+/*Default*/
+#div_cookies a{
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+}
+/*Hover*/
+#div_cookies a:hover{color: rgba(201,26,255,1);}
+/*Active*/
+#div_cookies a:active{color: rgba(220,110,255,1);}
+
 /*PARA DISPOSITIVOS COM LARGURA MÁXIMA DE 600px*/
 @media only screen and (max-width: 600px){
 	/*Divisões principais*/
@@ -327,6 +347,9 @@ h5{font-size: 12pt;}
 	/*Chat*/
 	#btn_iframe{width: 100%;}
 	#iframe_chat{width: 100%;}
+
+	/*Cookies*/
+	#div_cookies{background-color: rgba(0,0,0,1);}
 }
 
 /*PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 600px*/
@@ -370,4 +393,11 @@ h5{font-size: 12pt;}
 	/*Chat*/
 	#btn_iframe{width: 30%;}
 	#iframe_chat{width: 30%;}
+
+	/*Cookies*/
+	#div_cookies{background-color: rgba(0,0,0,0.9);}
+	#div_cookies:hover{
+		background-color: rgba(0,0,0,1);
+		transition: 0.2s;
+	}
 }

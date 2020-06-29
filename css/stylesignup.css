@@ -14,6 +14,16 @@ div.div_content form{
 	width: auto;
 }
 
+/*Links*/
+/*Links*/
+/*Default*/
+#form_register a{
+	color: rgba(137,0,179,1);
+	cursor: pointer;
+}
+#form_register a:hover{color: rgba(201,26,255,1);}
+#form_register a:active{color: rgba(220,110,255,1);}
+
 /*Imagens*/
 #form_register img{
 	display: inline;

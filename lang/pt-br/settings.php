@@ -105,7 +105,7 @@
 	<?php
 		while ($data = mysqli_fetch_array($result_user)) {
 	?>
-	<body onload="resetedit(); localStorage.setItem('language', 'pt-br'); colorSet(); waitCompleteLoad();" style='background-image: url("data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data['userBackground']); ?>")'>
+	<body onload="resetedit(); bodyLoadFunction('language', 'pt-br', 1)" style='background-image: url("data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data['userBackground']); ?>")'>
 		<div id=loadContent>
 			<div id="div_header">
 				<input class="btn_button" type="button" value="VOLTAR" onmousedown="movelink('return')">
@@ -403,6 +403,12 @@
 					?>
 				</form>
 			</section>
+		</div>
+		<div id="div_cookies" style="display: none;">
+			Utilizando o nosso site e continuando a navegar vamos entender que você aceita a nossa política de <a href="http://localhost/projecthanabi_web/info/cookies.html" target="_blank">cookies</a>. Caso queira saber mais sobre <a href="http://localhost/projecthanabi_web/info/cookies.html" target="_blank">cookies</a>, como usamos e a nossa política clique no link exibido.</a>
+			<br>
+			<br>
+			<button class="btn_button" onmousedown="setCookie('terms_of_cookie', 'allowed', 365)">Fechar</button>
 		</div>
 	</body>
 </html>
