@@ -21,7 +21,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="../../images/hanabi.png">
 		<title>Chat - Customer Module</title>
 	</head>
-	<body id="body_chat" onload="bodyLoadFunction('language', 'pt-br', 1);$('#div_chatbox').animate({ scrollTop: $('#div_chatbox').prop('scrollHeight')}, 'normal');">
+	<body id="body_chat" onload="bodyLoadFunction('language', 'pt-br', '134');$('#div_chatbox').animate({ scrollTop: $('#div_chatbox').prop('scrollHeight')}, 'normal');">
 		<div id=loadContent>
 			<?php
 				include("../../php/connection.php");

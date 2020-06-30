@@ -84,7 +84,7 @@
 		<link rel="icon" type="image/x-icon" href="../../images/hanabi.png">
 		<link rel="shortcut icon" type="image/x-icon" href="../../images/hanabi.png">
 	</head>
-	<body onload="bodyLoadFunction('language', 'pt-br', 1)">
+	<body onload="bodyLoadFunction('language', 'pt-br', '1234')">
 		<div id=loadContent>
 			<a id="top" hidden></a>
 			<a id="link_to_top" href="#top"><img id="img_goup" src="../../images/goup1.png" onmouseover="changeimage1()" onmouseout="changeimage2()"></a>

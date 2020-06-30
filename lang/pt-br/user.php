@@ -146,7 +146,7 @@
 
 		while ($data = mysqli_fetch_array($result_background)) {
 	?>
-	<body onload="bodyLoadFunction('language', 'pt-br', 1)" style='background-image: url("data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data['userBackground']); ?>")'>
+	<body onload="bodyLoadFunction('language', 'pt-br', '1234')" style='background-image: url("data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data['userBackground']); ?>")'>
 	<?php
 		}
 	?>

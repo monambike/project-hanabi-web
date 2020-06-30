@@ -84,7 +84,7 @@
 		<link rel="icon" type="image/x-icon" href="../../images/hanabi.png">
 		<link rel="shortcut icon" type="image/x-icon" href="../../images/hanabi.png">
 	</head>
-	<body onload="bodyLoadFunction('language', 'pt-br', 1)">
+	<body onload="bodyLoadFunction('language', 'pt-br', '1234')">
 		<noscript>
 		</noscript>
 		<div id=loadContent>

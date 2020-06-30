@@ -34,7 +34,7 @@
 		<link rel="icon" type="image/x-icon" href="../../images/hanabi.png">
 		<link rel="shortcut icon" type="image/x-icon" href="../../images/hanabi.png">
 	</head>
-	<body id="loadContent" onload="bodyLoadFunction('language', 'pt-br', 0)" style="display: none;">
+	<body id="loadContent" onload="bodyLoadFunction('language', 'pt-br', '123')" style="display: none;">
 		<a id="top" hidden></a>
 		<a id="link_to_top" href="#top"><img id="img_goup" src="../../images/goup1.png" onmouseover="changeimage1()" onmouseout="changeimage2()"></a>
 		<div style="background-color: rgba(255,255,255,0.85);">
