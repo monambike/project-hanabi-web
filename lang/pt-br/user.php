@@ -146,7 +146,11 @@
 
 		while ($data = mysqli_fetch_array($result_background)) {
 	?>
+<<<<<<< Updated upstream
 	<body onload="localStorage.setItem('account_was_open', 'false'); verify_account_state(); localStorage.setItem('language', 'pt-br'); changeimage2(); colorSet(); waitCompleteLoad();" style='background-image: url("data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data['userBackground']); ?>")'>
+=======
+	<body onload="bodyLoadFunction('language', 'pt-br', '1234')" style='background-image: url("data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data['userBackground']); ?>")'>
+>>>>>>> Stashed changes
 	<?php
 		}
 	?>

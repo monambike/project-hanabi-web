@@ -105,7 +105,11 @@
 	<?php
 		while ($data = mysqli_fetch_array($result_user)) {
 	?>
+<<<<<<< Updated upstream
 	<body onload="resetedit(); localStorage.setItem('language', 'pt-br'); colorSet(); waitCompleteLoad();" style='background-image: url("data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data['userBackground']); ?>")'>
+=======
+	<body onload="resetedit(); bodyLoadFunction('language', 'pt-br', '134')" style='background-image: url("data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data['userBackground']); ?>")'>
+>>>>>>> Stashed changes
 		<div id=loadContent>
 			<div id="div_header">
 				<input class="btn_button" type="button" value="VOLTAR" onmousedown="movelink('return')">

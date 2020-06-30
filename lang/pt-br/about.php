@@ -84,7 +84,11 @@
 		<link rel="icon" type="image/x-icon" href="../../images/hanabi.png">
 		<link rel="shortcut icon" type="image/x-icon" href="../../images/hanabi.png">
 	</head>
+<<<<<<< Updated upstream
 	<body onload="verify_account_state(); localStorage.setItem('language', 'pt-br'); changeimage2(); colorSet(); waitCompleteLoad();">
+=======
+	<body onload="bodyLoadFunction('language', 'pt-br', '1234')">
+>>>>>>> Stashed changes
 		<div id=loadContent>
 			<a id="top" hidden></a>
 			<a id="link_to_top" href="#top"><img id="img_goup" src="../../images/goup1.png" onmouseover="changeimage1()" onmouseout="changeimage2()"></a>

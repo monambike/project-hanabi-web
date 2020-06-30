@@ -21,7 +21,11 @@
 		<link rel="shortcut icon" type="image/x-icon" href="../../images/hanabi.png">
 		<title>Chat - Customer Module</title>
 	</head>
+<<<<<<< Updated upstream
 	<body id="body_chat" onload="localStorage.setItem('language', 'pt-br'); colorSet(); waitCompleteLoad();$('#div_chatbox').animate({ scrollTop: $('#div_chatbox').prop('scrollHeight')}, 'normal');">
+=======
+	<body id="body_chat" onload="bodyLoadFunction('language', 'pt-br', '134');$('#div_chatbox').animate({ scrollTop: $('#div_chatbox').prop('scrollHeight')}, 'normal');">
+>>>>>>> Stashed changes
 		<div id=loadContent>
 			<?php
 				include("../../php/connection.php");

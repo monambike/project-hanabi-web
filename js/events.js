@@ -35,12 +35,6 @@ function movelink(navigation){
 				notice.innerHTML = "Email com formato inválido.";
 				notice.hidden = false;				
 			}
-		}else if(navigation == 'logoff.php'){
-			//Ao clicar em 'login', ele fecha a aba de conta, para otimizar a experiência do usuário
-			localStorage.setItem('account_was_open', 'false');
-			window.open('../../php/'+navigation, '_self');
-		
-		//Salvar configurações
 		}else if(navigation == 'saveconfig'){
 			//Ao clicar em 'login', ele fecha a aba de conta, para otimizar a experiência do usuário
 			document.getElementById('form_settings').submit();
@@ -50,10 +44,6 @@ function movelink(navigation){
 		}else if(navigation == 'return'){
 			window.history.back();
 		}else{
-			if(navigation == 'signup.php' || navigation == 'forgot.php' || navigation == 'user.php' || navigation == 'settings.php' || navigation == 'search.php' || navigation == 'chat.php'){
-				//Ao clicar em 'signup' ou 'forgot', ou em algum dos itens presentes em 'conta' ele fecha a aba de conta, para otimizar a experiência do usuário
-				localStorage.setItem('account_was_open', 'false');
-			}
 			window.open(navigation, '_self');
 		}
 	}, 500);
@@ -216,25 +206,9 @@ function change_account_state(){
 		//Esse estado é quando ele está fechado
 		//e você clica com o objetivo de abrir e salvar
 		account_state.style.display = "block";
-		localStorage.setItem('account_was_open', 'true');
 	}else{
 		//Esse estado é quando ele está aberto
 		//e você clica com o objetivo de fechar e salvar
-		account_state.style.display = "none";
-		localStorage.setItem('account_was_open', 'false');
-	}
-}
-//Função que ao carregar a página, vai alterar o estado do account_state de acordo com a variável global
-function verify_account_state(){
-	var was_open = localStorage.getItem('account_was_open');
-	var account_state = document.getElementById('div_account');
-
-	//Ao carregar a página
-	if(was_open == 'true'){
-		//Se ele estava aberto, ele continua aberto
-		account_state.style.display = "block";
-	}else if(was_open == 'false'){
-		//Se ele estava fechado, ele continua fechado
 		account_state.style.display = "none";
 	}
 }
@@ -360,4 +334,76 @@ function interactIframe(){
 			menubar.style.display = "block";
 		}
 	}
+<<<<<<< Updated upstream
+=======
+}
+
+function setCookie(cname, cvalue, exdays) {
+	var d = new Date();
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	var expires = "expires="+d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+
+	checkCookiesAllowed();
+}
+
+function getCookie(cname) {
+	var name = cname + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+
+	for(var i = 0; i <ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+
+function checkCookiesAllowed(){
+	var terms = getCookie("terms_of_cookie");
+	var divcookie = document.getElementById("div_cookies");
+
+	//Se o usuário não concordou com os cookies
+	if (terms === ""){
+		divcookie.style.display = "block";
+	//Se o usuário concordou com os cookies
+	}else{
+		divcookie.style.display = "none";
+	}
+}
+
+function bodyLoadFunction(lang, locate, type){
+	//Carrega as funções
+	var conditionType;
+	for(var i = 0; i < type.length; i++){
+		conditionType = type.charAt(i);
+
+		switch(conditionType){
+			case '1':
+				//Define o idioma da página
+				localStorage.setItem(lang, locate);
+				break;
+			case '2':
+				//Atualiza o botão de ir ao topo
+				changeimage2();
+				break;
+			case '3':
+				//Checa se o usuário entendeu a política de cookies
+				checkCookiesAllowed();
+				break;
+			case '4':
+				//Define as cores caso o usuário tenha definido
+				colorSet();
+				break;
+		}
+	}
+
+	//Depois de tudo carregado carrega o body
+	waitCompleteLoad();
+>>>>>>> Stashed changes
 }

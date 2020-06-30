@@ -84,7 +84,11 @@
 		<link rel="icon" type="image/x-icon" href="../../images/hanabi.png">
 		<link rel="shortcut icon" type="image/x-icon" href="../../images/hanabi.png">
 	</head>
+<<<<<<< Updated upstream
 	<body onload="verify_account_state(); localStorage.setItem('language', 'pt-br'); changeimage2(); colorSet(); waitCompleteLoad();">
+=======
+	<body onload="bodyLoadFunction('language', 'pt-br', '1234')">
+>>>>>>> Stashed changes
 		<noscript>
 		</noscript>
 		<div id=loadContent>
