@@ -34,11 +34,7 @@
 		<link rel="icon" type="image/x-icon" href="../../images/hanabi.png">
 		<link rel="shortcut icon" type="image/x-icon" href="../../images/hanabi.png">
 	</head>
-<<<<<<< Updated upstream
-	<body onload="verify_account_state(); localStorage.setItem('language', 'pt-br'); changeimage2();">
-=======
 	<body id="loadContent" onload="bodyLoadFunction('language', 'pt-br', '123')" style="display: none;">
->>>>>>> Stashed changes
 		<a id="top" hidden></a>
 		<a id="link_to_top" href="#top"><img id="img_goup" src="../../images/goup1.png" onmouseover="changeimage1()" onmouseout="changeimage2()"></a>
 		<div style="background-color: rgba(255,255,255,0.85);">
@@ -178,6 +174,12 @@
 					</form>
 				</div>	
 			</section>
+			<div id="div_cookies" style="display: none;">
+				Utilizando o nosso site e continuando a navegar vamos entender que você aceita a nossa política de <a href="http://localhost/projecthanabi_web/info/cookies.html" target="_blank">cookies</a>. Caso queira saber mais sobre <a href="http://localhost/projecthanabi_web/info/cookies.html" target="_blank">cookies</a>, como usamos e a nossa política clique no link exibido.</a>
+				<br>
+				<br>
+				<button class="btn_button" onmousedown="setCookie('terms_of_cookie', 'allowed', 365)">Fechar</button>
+			</div>
 			<footer>
 				Site criado por Vinícius Gabriel Marques de Melo com propostas educativas.
 				<br>Sendo mantido desde 2020 até 2020

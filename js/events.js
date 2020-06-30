@@ -17,6 +17,8 @@ function movelink(navigation){
 			var confirm = document.getElementById('signup_txt_confirm').value;
 			//Aviso
 			var notice = document.getElementById('txt_notice');
+			//Termos de uso e serviço
+			var terms = document.getElementById('terms_of_use');
 
 			//Verifica se os dados estão em um formato correto
 			if(name === "" || surname === "" || username === "" || email === "" || password === "" || confirm === ""){
@@ -27,7 +29,10 @@ function movelink(navigation){
 				//Verifica se a senha está igual ao campo de senha confirmada, caso não esteja, emite uma mensagem
 				notice.innerHTML = "Campo 'senha' diferente do campo <br> 'confirmar senha'.";
 				notice.hidden = false;
-			}else if(email.includes('@') && email.includes('.com')){
+			}else if(terms.checked === false){
+				notice.innerHTML = "Você precisa aceitar os termos de uso antes de cadastrar.";
+				notice.hidden = false;
+			}else if(email.includes('@')){
 				//Caso todos os pedidos sejam atendidos, envia o formulário
 				document.getElementById('form_register').submit();
 			}else{
@@ -128,7 +133,7 @@ function transferColor(transfered_color){
 
 //Faz com que o site só seja mostrado com javascript ativado ou com ele carregado por completo
 function waitCompleteLoad(){
-	document.getElementById('loadContent').style.display= 'block';
+	document.getElementById('loadContent').style.display = 'block';
 }
 
 //SONS
@@ -334,8 +339,6 @@ function interactIframe(){
 			menubar.style.display = "block";
 		}
 	}
-<<<<<<< Updated upstream
-=======
 }
 
 function setCookie(cname, cvalue, exdays) {
@@ -405,5 +408,4 @@ function bodyLoadFunction(lang, locate, type){
 
 	//Depois de tudo carregado carrega o body
 	waitCompleteLoad();
->>>>>>> Stashed changes
 }

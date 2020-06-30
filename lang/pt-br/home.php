@@ -84,11 +84,7 @@
 		<link rel="icon" type="image/x-icon" href="../../images/hanabi.png">
 		<link rel="shortcut icon" type="image/x-icon" href="../../images/hanabi.png">
 	</head>
-<<<<<<< Updated upstream
-	<body onload="verify_account_state(); localStorage.setItem('language', 'pt-br'); changeimage2(); colorSet(); waitCompleteLoad();">
-=======
 	<body onload="bodyLoadFunction('language', 'pt-br', '1234')">
->>>>>>> Stashed changes
 		<noscript>
 		</noscript>
 		<div id=loadContent>
@@ -260,6 +256,12 @@
 						<h5>E é isso, muito obrigado por ter lido até aqui, espero que continue lendo e que goste do meu trabalho.</h5>
 					</div>
 				</section>
+				<div id="div_cookies" style="display: none;">
+					Utilizando o nosso site e continuando a navegar vamos entender que você aceita a nossa política de <a href="http://localhost/projecthanabi_web/info/cookies.html" target="_blank">cookies</a>. Caso queira saber mais sobre <a href="http://localhost/projecthanabi_web/info/cookies.html" target="_blank">cookies</a>, como usamos e a nossa política clique no link exibido.</a>
+					<br>
+					<br>
+					<button class="btn_button" onmousedown="setCookie('terms_of_cookie', 'allowed', 365)">Fechar</button>
+				</div>
 				<footer>
 					Site criado por Vinícius Gabriel Marques de Melo com propostas educativas.
 					<br>Sendo mantido desde 2020 até 2020

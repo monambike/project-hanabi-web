@@ -21,11 +21,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="../../images/hanabi.png">
 		<title>Chat - Customer Module</title>
 	</head>
-<<<<<<< Updated upstream
-	<body id="body_chat" onload="localStorage.setItem('language', 'pt-br'); colorSet(); waitCompleteLoad();$('#div_chatbox').animate({ scrollTop: $('#div_chatbox').prop('scrollHeight')}, 'normal');">
-=======
 	<body id="body_chat" onload="bodyLoadFunction('language', 'pt-br', '134');$('#div_chatbox').animate({ scrollTop: $('#div_chatbox').prop('scrollHeight')}, 'normal');">
->>>>>>> Stashed changes
 		<div id=loadContent>
 			<?php
 				include("../../php/connection.php");
@@ -135,6 +131,12 @@
 					}
 				}
 			?>
+		</div>
+		<div id="div_cookies" style="display: none;">
+			Utilizando o nosso site e continuando a navegar vamos entender que você aceita a nossa política de <a href="http://localhost/projecthanabi_web/info/cookies.html" target="_blank">cookies</a>. Caso queira saber mais sobre <a href="http://localhost/projecthanabi_web/info/cookies.html" target="_blank">cookies</a>, como usamos e a nossa política clique no link exibido.</a>
+			<br>
+			<br>
+			<button class="btn_button" onmousedown="setCookie('terms_of_cookie', 'allowed', 365)">Fechar</button>
 		</div>
 	</body>
 </html>
