@@ -4,7 +4,7 @@ Note: If you want to download it and test in your machine. The site won't work i
 
 ## CHOOSE LANGUAGE
 | [PORTUGUÊS](#PORTUGUÊS---VOLTAR-AO-TOPO) | [ENGLISH](#ENGLISH---GO-TO-THE-TOP) | [ESPAÑOL](#ESPAÑOL---IR-AL-INICIO) | [日本語](#日本語---トップに戻る) |
-|---|---|---|---|
+|-|-|-|-|
 
 ## PORTUGUÊS - [(VOLTAR AO TOPO)](#PROJECT-HANABI)
 
