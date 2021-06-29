@@ -8,6 +8,11 @@
 
 
 
+// FUNÇÃO DE NAVEGAÇÃO
+// -------------------------------------------------------------
+// Descrição:
+// Função responsável pela navegação do site.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function movelink(navigation){
 	// Variável que pega a linguagem definida pelo usuário
 	var lang = document.getElementById('option_language');
@@ -139,11 +144,24 @@ function movelink(navigation){
 	// -------------------------------------------------------------
 	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }
+// -------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 
 // #endregion
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+// FUNÇÕES SEM CATEGORIA
+// -------------------------------------------------------------
+// Descrição:
+// Funções que não possuem categoria definida no momento.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// #region
+
+
 
 // FUNÇÃO RESPONSÁVEL POR PASSAR A COR PARA AS VARIÁVEIS
 // -------------------------------------------------------------
@@ -241,6 +259,37 @@ function waitCompleteLoad(){
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // -------------------------------------------------------------
 
+// ABRE/FECHA DIVISÃO DA CONTA
+// -------------------------------------------------------------
+// Descrição:
+// Função que faz o controle da abertura e do  fechamento  refe-
+// rente à divisão de fazer login na conta.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+function change_account_state(){
+	var account_state = document.getElementById('div_account');
+
+	//Eu cliquei
+	if(window.getComputedStyle(div_account).display === "none"){
+		//Esse estado é quando ele está fechado
+		//e você clica com o objetivo de abrir e salvar
+		account_state.style.display = "block";
+	}else{
+		//Esse estado é quando ele está aberto
+		//e você clica com o objetivo de fechar e salvar
+		account_state.style.display = "none";
+	}
+}
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+
+
+// #endregion
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+
+
 // FUNÇÕES DE SONS
 // -------------------------------------------------------------
 // Descrição:
@@ -282,6 +331,8 @@ document.onmousedown = function(e){
 // #endregion
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // -------------------------------------------------------------
+
+
 
 // FUNÇÕES RELACIONADAS AO BOTÃO DE IR PARA O TOO "GOUP"
 // -------------------------------------------------------------
@@ -339,8 +390,6 @@ function changeimage2(){
 // #endregion
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // -------------------------------------------------------------
-
-
 
 
 
@@ -412,31 +461,6 @@ function resetcolors(){
 // -------------------------------------------------------------
 
 
-
-
-
-// ABRE/FECHA DIVISÃO DA CONTA
-// -------------------------------------------------------------
-// Descrição:
-// Função que faz o controle da abertura e do  fechamento  refe-
-// rente à divisão de fazer login na conta.
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-function change_account_state(){
-	var account_state = document.getElementById('div_account');
-
-	//Eu cliquei
-	if(window.getComputedStyle(div_account).display === "none"){
-		//Esse estado é quando ele está fechado
-		//e você clica com o objetivo de abrir e salvar
-		account_state.style.display = "block";
-	}else{
-		//Esse estado é quando ele está aberto
-		//e você clica com o objetivo de fechar e salvar
-		account_state.style.display = "none";
-	}
-}
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-// -------------------------------------------------------------
 
 // FUNÇÕES RELACIONADAS AO BOTÃO EDITAR
 // -------------------------------------------------------------
@@ -634,6 +658,17 @@ function closeNav(){
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // -------------------------------------------------------------
 
+
+
+// CHAT
+// -------------------------------------------------------------
+// Descrição:
+// Funções diretamente relacionadas ao chat.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// #region
+
+
+
 // ATUALIZA CONTAGEM DE CARACTERES DO CHAT
 // -------------------------------------------------------------
 // Descrição:
@@ -672,6 +707,14 @@ function interactIframe(){
 }
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // -------------------------------------------------------------
+
+
+
+// #endregion
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+
 
 // COOKIES 
 // -------------------------------------------------------------
@@ -749,7 +792,6 @@ function checkCookiesAllowed(){
 // #endregion
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // -------------------------------------------------------------
-
 
 
 
