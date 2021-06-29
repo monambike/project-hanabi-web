@@ -1,14 +1,28 @@
 <?php
+	// REALIZA A DELEÇÃO DE UM USUÁRIO
+	// -------------------------------------------------------------
+	// Descrição:
+	// Apaga uma conta de usuário.
+	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+	// Estabelece a conexão com o banco
 	include("connection.php");
+
+	// Entra com um nome para a sessão
 	session_name('userHanabi_online');
 	session_start();
 	
+	// Armazena Query para fazer a deleção de um usuário
 	$delete = '
 		DELETE
 		FROM hanabiUser
 		WHERE
 			userEmail = "'.htmlentities($_SESSION['email']).'"
 	';
+
+	// Executa a Query
 	$result = mysqli_query($con, $delete);
 
 	mysqli_close($con);
@@ -22,12 +36,20 @@
 	        $params["secure"], $params["httponly"]
 	    );
 	}
+
+	// Outro método para encerrar a sessão atual
 	session_destroy();
 
-	// Depois de concluído dá um aviso de conclusão e redireciona o usuário
+	// Depois de concluído dá um aviso de conclusão e redireciona  o
+	// usuário
 	echo
 	'<script>
 		alert("Usuário deletado com sucesso!");
 		window.open("../lang/" + localStorage.getItem("language") + "/home.php", "_self");
 	</script>';
+
+
+
+	// -------------------------------------------------------------
+	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ?>
