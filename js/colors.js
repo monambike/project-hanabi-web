@@ -12,7 +12,7 @@
 // Descrição:
 // Variáveis que atuam como contadores.
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-// [i] Contador que realiza a iteração dos  itens  que  precisam
+// Contador que realiza a iteração dos  itens  que  precisam
 // receber alguma cor
 var i;
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -23,9 +23,9 @@ var i;
 // Descrição:
 // Variáveis que atuam como contadores.
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-// [i] Variável que verifica se o usuário está logado.
+// Variável que verifica se o usuário está logado.
 var logado;
-// [i] Variável que verifica se as cores escolhidas são  as  pa-
+// Variável que verifica se as cores escolhidas são  as  pa-
 // drão, ou se o usuário as mudou.
 var color_default;
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
