@@ -18,7 +18,7 @@
 	// Pega a hora atual
 	$now = new DateTime();
 	
-	// Query para pegar o nome do usuário
+	// Armazena a Query para pegar o nome do usuário
 	$getusername = "
 		SELECT
 			userUsername,
@@ -27,8 +27,8 @@
 		WHERE
 			userEmail = '".htmlentities($_SESSION['email'])."'
 	";
-	
-	// Executa a query
+
+	// Executa a Query
 	$result = mysqli_query($con, $getusername);
 
 	// Faz o envio da mensagem ao chat
@@ -43,5 +43,7 @@
 	}
 
 
+
+	// -------------------------------------------------------------
 	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ?>
