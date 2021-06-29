@@ -1,60 +1,156 @@
-//NAVEGAÇÃO
+// FUNÇÃO RESPONSÁVEL PELA MAIOR PARTE DA NAVEGAÇÃO DO SITE
+// -------------------------------------------------------------
+// Descrição:
+// Função responsável por realizar a maior parte da navegação do
+// site.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// #region
+
+
+
 function movelink(navigation){
+	// Variável que pega a linguagem definida pelo usuário
 	var lang = document.getElementById('option_language');
 	
+	// CONDICIONAL RESPONSÁVEL PELA NAVEGAÇÃO
+	// -------------------------------------------------------------
+	// Descrição:
+	// De acordo com os dados passados no método, realiza uma deter-
+	// minada navegação.
+	// Tem um período de espera para evitar erros.
+	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	setTimeout(function () {
-		//PHP RELACIONADO À CONTA
+		// "login"
 		if(navigation == 'login'){
 			//Ao clicar em 'login', ele fecha a aba de conta, para otimizar a experiência do usuário
 			document.getElementById('form_login').submit();
-		}else if(navigation == 'register'){
-			//Dados do usuário
+		}
+		// "register"
+		else if(navigation == 'register'){
+			// VARIÁVEIS
+			// -------------------------------------------------------------
+			// Descrição:
+			// Variáveis utilizadas dentro da condicional.
+			// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+			// VARIÁVEIS DE DADOS DO USUÁRIO
+			// -------------------------------------------------------------
+			// Descrição:
+			// Variáveis responsáveis por manipular dados de usuário.
+			// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 			var name = document.getElementById('signup_txt_name').value;
 			var surname = document.getElementById('signup_txt_surname').value;
 			var username = document.getElementById('signup_txt_username').value;
 			var email = document.getElementById('signup_txt_email').value;
 			var password = document.getElementById('signup_txt_password').value;
 			var confirm = document.getElementById('signup_txt_confirm').value;
-			//Aviso
-			var notice = document.getElementById('txt_notice');
-			//Termos de uso e serviço
-			var terms = document.getElementById('terms_of_use');
+			// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+			// -------------------------------------------------------------
 
-			//Verifica se os dados estão em um formato correto
+			// AVISOS
+			// -------------------------------------------------------------
+			// Descrição:
+			// Variáveis responsáveis pelo controle de avisos.
+			// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+			var notice = document.getElementById('txt_notice');
+			// Termos de uso e serviço
+			// Variáveis responsáveis pelos termos de uso.
+			var terms = document.getElementById('terms_of_use');
+			// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+			// -------------------------------------------------------------
+
+
+
+			// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+			// -------------------------------------------------------------
+
+
+
+			// VALIDAÇÃO DOS DADOS DO FORM
+			// -------------------------------------------------------------
+			// Descrição:
+			// Função que realiza a validação dos dados no form.
+			// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+			// Verifica se todos os campos estão preenchidos, caso não este-
+			// jam, emite uma mensagem
 			if(name === "" || surname === "" || username === "" || email === "" || password === "" || confirm === ""){
-				//Verifica se todos os campos estão preenchidos, caso não estejam, emite uma mensagem
 				notice.innerHTML = "Não deixe nenhum dos campos vazios.";
 				notice.hidden = false;
-			}else if (password != confirm){
-				//Verifica se a senha está igual ao campo de senha confirmada, caso não esteja, emite uma mensagem
+			}
+			// Caso a senha e o campo de confirmar senha não estejam  iguais
+			// emite uma mensagem
+			else if (password != confirm){
 				notice.innerHTML = "Campo 'senha' diferente do campo <br> 'confirmar senha'.";
 				notice.hidden = false;
-			}else if(terms.checked === false){
+			}
+			// Caso o usuário não aceitou os termos de uso exibe uma  mensa-
+			// gem
+			else if(terms.checked === false){
 				notice.innerHTML = "Você precisa aceitar os termos de uso antes de cadastrar.";
 				notice.hidden = false;
-			}else if(email.includes('@')){
-				//Caso todos os pedidos sejam atendidos, envia o formulário
+			}
+			// Caso o email seja válido envia o formulário
+			else if(email.includes('@')){
+				// Envia o formulário
 				document.getElementById('form_register').submit();
-			}else{
+			}
+			// Caso o email seja inválido, retorna uma mensagem
+			else{
 				//Verifica se o email possui um '@' e um '.com', caso não possua, emite uma mensagem
 				notice.innerHTML = "Email com formato inválido.";
 				notice.hidden = false;				
 			}
-		}else if(navigation == 'saveconfig'){
+			
+
+
+			// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+			// -------------------------------------------------------------
+		}
+		// "saveconfig"
+		else if(navigation == 'saveconfig'){
 			//Ao clicar em 'login', ele fecha a aba de conta, para otimizar a experiência do usuário
 			document.getElementById('form_settings').submit();
-		//IDIOMA
-		}else if(navigation == 'acess_site_language'){
+		}
+		// CONDICIONAIS RELACIONADAS À IDIOMA
+		// -------------------------------------------------------------
+		// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+		// "acess_site_language"
+		else if(navigation == 'acess_site_language'){
+			// Muda o idioma do site
 			window.open('lang/' + lang.value + '/home.php', '_self');
-		}else if(navigation == 'return'){
+		}
+		// "return"
+		else if(navigation == 'return'){
+			// Volta uma página
 			window.history.back();
-		}else{
+		}
+		// else
+		else{
 			window.open(navigation, '_self');
 		}
+		// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+		// -------------------------------------------------------------
 	}, 500);
+	// -------------------------------------------------------------
+	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }
 
-//Passa a cor referente à paleta de cores da tablea para as entradas
+
+
+// #endregion
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+// FUNÇÃO RESPONSÁVEL POR PASSAR A COR PARA AS VARIÁVEIS
+// -------------------------------------------------------------
+// Descrição:
+// Passa a cor referente à paleta de cores da tablea para as en-
+// tradas
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function transferColor(transfered_color){
 	inputColor1 = document.getElementById("site_color1");
 	inputColor2 = document.getElementById("site_color2");
@@ -130,29 +226,78 @@ function transferColor(transfered_color){
 
 	alert("A cor foi selecionada com sucesso!");
 }
+// -------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-//Faz com que o site só seja mostrado com javascript ativado ou com ele carregado por completo
+// FUNÇÃO RESPONSÁVEL POR EXIBIR O CONTEÚDO DO SITE
+// -------------------------------------------------------------
+// Descrição:
+// Faz com que o site só seja mostrado com javascript ativado ou
+// com ele carregado por completo
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function waitCompleteLoad(){
 	document.getElementById('loadContent').style.display = 'block';
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
 
-//SONS
-//Sons de mouse e teclado
-/*document.onkeypress = function(e) {
+// FUNÇÕES DE SONS
+// -------------------------------------------------------------
+// Descrição:
+// Funções que realizam alguma operação relacionada ao som.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// #region
+
+
+
+// SOM DO TECLADO
+// -------------------------------------------------------------
+// Descrição:
+// Reproduz um som de teclado ao pressionar alguma tecla
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+document.onkeypress = function(e) {
 	var keyboardclick = document.createElement('audio');
 	keyboardclick.src = '../../sounds/keyboardclick.mp3';
 	keyboardclick.volume = 0.2;
 	keyboardclick.play();
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+// SOM DO MOUSE
+// -------------------------------------------------------------
+// Descrição:
+// Reproduz um som de mouse ao pressionar algum botão
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 document.onmousedown = function(e){
 	var mouseclick = document.createElement('audio');
 	mouseclick.src = '../../sounds/mouseclick.mp3';
 	mouseclick.play();
-}*/
-//EM ANÁLISE
+}
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
 
-//GOUP
-//Mudar a imagem do botão 'goup'
+
+
+// #endregion
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+// FUNÇÕES RELACIONADAS AO BOTÃO DE IR PARA O TOO "GOUP"
+// -------------------------------------------------------------
+// Descrição:
+// Funções que estão diretamente relacionadas com o botão de  ir
+// para o topo "goup".
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// #region
+
+
+
+// FUNÇÃO 1 DE MUDAR O ESTADO DO BOTÃO
+// -------------------------------------------------------------
+// Descrição:
+// Primeira função que controla a aparência do botão.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function changeimage1(){
 	var imgGoup = document.getElementById('img_goup');
 	
@@ -164,6 +309,14 @@ function changeimage1(){
 		imgGoup.style.opacity = 1;
 	}
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+// FUNÇÃO 2 DE MUDAR O ESTADO DO BOTÃO
+// -------------------------------------------------------------
+// Descrição:
+// Segunda função que controla a aparência do botão.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function changeimage2(){
 	var imgGoup = document.getElementById('img_goup');
 	
@@ -178,31 +331,96 @@ function changeimage2(){
 		}
 	}
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
 
-//AVISOS
-//Sucesso
+
+
+// #endregion
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+
+
+
+
+// FUNÇÕES DE AVISOS
+// -------------------------------------------------------------
+// Descrição:
+// Funções que fazem a exibição ou controle de algum aviso.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// #region
+
+
+
+// MENSAGEM DE SUCESSO
+// -------------------------------------------------------------
+// Descrição:
+// Exibe uma mensagem de sucesso.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function success(){alert("Usuário cadastrado com sucesso!");}
-//Caixa de confirmação
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+// MENSAGEM DE CONFIRMAÇÃO PARA LIMPAR CAMPOS
+// -------------------------------------------------------------
+// Descrição:
+// Mostra uma mensagem de confirmação caso o usuário decida lim-
+// par os campos.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function clearfields(){
 	if(confirm("Tem certeza que deseja limpar os campos?")){
 		document.getElementById("form_register").reset();
 	}
 }
-//Apaga a conta do usuário
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+
+// MENSAGEM DE CONFIRMAÇÃO PARA APAGAR CONTA
+// -------------------------------------------------------------
+// Descrição:
+// Mostra uma mensagem de confirmação para quando o usuário  de-
+// cida apagar a conta.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function deleteaccount(){
 	if(confirm("Tem certeza que deseja excluir a sua conta? Essa ação não pode ser desfeita.")){
 		window.open("../../php/delete.php", '_self');
 	}	
 }
-//Reseta cores
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+// MENSAGEM DE CONFIRMAÇÃO RESETA CORES
+// -------------------------------------------------------------
+// Descrição:
+// Mostra uma mensagem de confirmação para quando o usuário  de-
+// cida resetar as cores para o padrão.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function resetcolors(){
 	if(confirm("Tem certeza que deseja resetar cores para o padrão?")){
 		window.open("../../php/reset.php", '_self');
-	}	
+	}
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
 
-//account_state
-//Função que vai verificar o último estado que foi deixado o account_state
+
+
+// #endregion
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+
+
+
+
+// ABRE/FECHA DIVISÃO DA CONTA
+// -------------------------------------------------------------
+// Descrição:
+// Função que faz o controle da abertura e do  fechamento  refe-
+// rente à divisão de fazer login na conta.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function change_account_state(){
 	var account_state = document.getElementById('div_account');
 
@@ -217,9 +435,24 @@ function change_account_state(){
 		account_state.style.display = "none";
 	}
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
 
-//PROFILE
-//Função que muda o estado do botão editar
+// FUNÇÕES RELACIONADAS AO BOTÃO EDITAR
+// -------------------------------------------------------------
+// Descrição:
+// Estão dispostas nesse grupo todas as funções diretamente  re-
+// lacionadas com a ação de editar.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// #region
+
+
+
+// MUDA ESTADO BOTÃO EDITAR
+// -------------------------------------------------------------
+// Descrição:
+// Função que muda o estado do botão editar.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function changeedit(){
 	editing = localStorage.getItem('editing');
 	btn_edit = document.getElementById('button_edit');
@@ -237,17 +470,45 @@ function changeedit(){
 	//Após isso, atualiza o form
 	updateedit();
 }
-//Função que restaura o botão editar ao atualizar a página
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+// REDEFINE O ESTADO DO FORM E DO BOTÃO EDITAR
+// -------------------------------------------------------------
+// Descrição:
+// Função que redefine o estado do botão editar e o do  form  ao
+// atualizar a página.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function resetedit(){
 	//Ao atualizar a página reseta o estado do botão editar
 	localStorage.setItem('editing', 'false');
 	//E atualiza o form
 	updateedit();
 }
-//Função que atualiza os elementos da página de acordo com o botão edit
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+// ATUALIZA COM BOTÃO EDITAR
+// -------------------------------------------------------------
+// Descrição:
+// Função que atualiza os elementos da página de  acordo  com  o
+// botão editar.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function updateedit(){
-	//VARIÁVEIS
-	//Caixas de Texto
+	// VARIÁVEIS
+	// -------------------------------------------------------------
+	// Descrição:
+	// Variáveis relacionadas à função atual.
+	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+	// CAIXAS DE TEXTO
+	// -------------------------------------------------------------
+	// Descrição:
+	// Variáveis relacionadas  à  manipulação  de  caixas  de  texto
+	// "textbox".
+	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	var txtName = document.getElementById('prof_txt_name');
 	var txtSurname = document.getElementById('prof_txt_surname');
 	var txtUsername = document.getElementById('prof_txt_username');
@@ -255,7 +516,14 @@ function updateedit(){
 	var txtPhone = document.getElementById('prof_txt_phone');
 	var txtCellphone = document.getElementById('prof_txt_cellphone');
 	var txtBio = document.getElementById('prof_txt_bio');
-	//Rótulos
+	// -------------------------------------------------------------
+	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+	// RÓTULOS
+	// Descrição:
+	// Variáveis relacionadas à manipulação de rótulos "labels".
+	// -------------------------------------------------------------
+	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	var lblName = document.getElementById('prof_lbl_name');
 	var lblSurname = document.getElementById('prof_lbl_surname');
 	var lblUsername = document.getElementById('prof_lbl_username');
@@ -263,12 +531,24 @@ function updateedit(){
 	var lblPhone = document.getElementById('prof_lbl_phone');
 	var lblCellphone = document.getElementById('prof_lbl_cellphone');
 	var lblBio = document.getElementById('prof_lbl_bio');
-	//Armazenamento Local
+	// -------------------------------------------------------------
+	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+	// Variável responsável pelo controle de edição.
 	editing = localStorage.getItem('editing')
 
+
+
+	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	// -------------------------------------------------------------
+
+
+
+
+
+	// Se o usuário está editando
 	if(editing == 'true'){
-		//Se estiver editando
-		//As caixas de texto ficam visíveis
+		// As caixas de texto ficam visíveis
 		txtName.hidden = false;
 		txtSurname.hidden = false;
 		txtUsername.hidden = false;
@@ -276,7 +556,7 @@ function updateedit(){
 		txtPhone.hidden = false;
 		txtCellphone.hidden = false;
 		txtBio.hidden = false;
-		//Os rótulos ficam invisíveis
+		// Os rótulos ficam invisíveis
 		lblName.hidden = true;
 		lblSurname.hidden = true;
 		lblUsername.hidden = true;
@@ -284,9 +564,10 @@ function updateedit(){
 		lblPhone.hidden = true;
 		lblCellphone.hidden = true;
 		lblBio.hidden = true;
-	}else if(editing == 'false'){
-		//Se não estiver editando
-		//As caixas de texto ficam invisíveis
+	}
+	// Se o usuário não está editando
+	else if(editing == 'false'){
+		// As caixas de texto ficam invisíveis
 		txtName.hidden = true;
 		txtSurname.hidden = true;
 		txtUsername.hidden = true;
@@ -294,7 +575,7 @@ function updateedit(){
 		txtPhone.hidden = true;
 		txtCellphone.hidden = true;
 		txtBio.hidden = true;
-		//Os rótulos ficam visíveis
+		// Os rótulos ficam visíveis
 		lblName.hidden = false;
 		lblSurname.hidden = false;
 		lblUsername.hidden = false;
@@ -304,26 +585,74 @@ function updateedit(){
 		lblBio.hidden = false;
 	}
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
 
-//MOBILE NAV
-//Abre e fecha
+
+// #endregion
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+
+
+// PAINEL DE NAVEGAÇÃO
+// -------------------------------------------------------------
+// Descrição:
+// Funções diretamente relacionadas ao painel de navegação.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// #region
+
+
+
+// FUNÇÃO QUE ABRE O PAINEL DE NAVEGAÇÃO
+// -------------------------------------------------------------
+// Descrição:
+// Função responsável por abrir o painel de navegação.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function openNav(){
 	document.getElementById("div_sidebar_id").style.width = "250px";
 	document.getElementById("div_navphone").style.marginLeft = "250px";
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+// FUNÇÃO QUE FECHA O PAINEL DE NAVEGAÇÃO
+// -------------------------------------------------------------
+// Descrição:
+// Função responsável por fechar o painel de navegação.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function closeNav(){
 	document.getElementById("div_sidebar_id").style.width = "0";
 	document.getElementById("div_navphone").style.marginLeft= "0";
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
 
-//Mostra a contagem de caracteres restantes
+
+
+// #endregion
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+// ATUALIZA CONTAGEM DE CARACTERES DO CHAT
+// -------------------------------------------------------------
+// Descrição:
+// Função que atualiza a contagem de caracteres restantes.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function remainingText(){
 	txt_message = document.getElementById('txt_message_send');
 	span_remaining = document.getElementById('remaining_text');
 	span_remaining.innerHTML = "("+(255-txt_message.value.length)+")";
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
 
-//Abre ou fecha o frame de acordo com o estado
+// FUNÇÃO QUE ABRE/FECHA O IFRAME DO CHAT
+// -------------------------------------------------------------
+// Descrição: Função que realiza a abertura ou fechamento da di-
+// visão contendo o iframe de acordo com o estado disponibiliza-
+// do.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function interactIframe(){
 	iframe = document.getElementById("iframe_chat");
 	menubar = document.getElementById("div_navphone");
@@ -332,7 +661,8 @@ function interactIframe(){
 		iframe.style.display = "block";
 		//Oculta a barra de menu para abir o chat
 		menubar.style.display = "none";
-	}else{
+	}
+	else{
 		iframe.style.display = "none";
 		//Caso a tela seja pequena mostra a barra de menu
 		if(window.matchMedia("(max-width: 600px)").matches){
@@ -340,7 +670,24 @@ function interactIframe(){
 		}
 	}
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
 
+// COOKIES 
+// -------------------------------------------------------------
+// Descrição:
+// Grupo de funções que fazem o controle dos cookies do  site  e
+// assuntos relacionados.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// #region
+
+
+
+// DEFINE O COOKIE DE ACORDO COM OS DADOS PASSADOS
+// -------------------------------------------------------------
+// Descrição:
+// Função que define um cookie para um dado que foi passado.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function setCookie(cname, cvalue, exdays) {
 	var d = new Date();
 	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -349,7 +696,15 @@ function setCookie(cname, cvalue, exdays) {
 
 	checkCookiesAllowed();
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
 
+// FUNÇÃO QUE FAZ A INTERPRETAÇÃO DOS COOKIES
+// -------------------------------------------------------------
+// Descrição:
+// Função que faz o recebimento e interpretação dos  cookies  de
+// acordo com o nome passado no método.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function getCookie(cname) {
 	var name = cname + "=";
 	var decodedCookie = decodeURIComponent(document.cookie);
@@ -366,7 +721,14 @@ function getCookie(cname) {
 	}
 	return "";
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
 
+// FUNÇÃO QUE VERIFICA SE OS COOKIES FORAM PERMITIDOS
+// -------------------------------------------------------------
+// Descrição:
+// Função que verifica se o usuário permitiu cookies no site.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function checkCookiesAllowed(){
 	var terms = getCookie("terms_of_cookie");
 	var divcookie = document.getElementById("div_cookies");
@@ -379,33 +741,65 @@ function checkCookiesAllowed(){
 		divcookie.style.display = "none";
 	}
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+
+
+// #endregion
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
+
+
+
+
+// CARREGA CORPO COM CONFIGURAÇÕES
+// -------------------------------------------------------------
+// Descrição:
+// Funções que faz o carregamento do corpo com as  configurações
+// determinadas.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// #region
+
+
 
 function bodyLoadFunction(lang, locate, type){
-	//Carrega as funções
+	// Variável que vai armazenar o número de uma determinada  posi-
+	// ção.
 	var conditionType;
+
+	// Para cada número presente em "type"
 	for(var i = 0; i < type.length; i++){
+		// Pega o número presente em uma determinada posição
 		conditionType = type.charAt(i);
 
+		// E carrega as funções de acordo com o número na posição
 		switch(conditionType){
 			case '1':
-				//Define o idioma da página
+				// Define o idioma da página
 				localStorage.setItem(lang, locate);
 				break;
 			case '2':
-				//Atualiza o botão de ir ao topo
+				// Atualiza o botão de ir ao topo
 				changeimage2();
 				break;
 			case '3':
-				//Checa se o usuário entendeu a política de cookies
+				// Checa se o usuário aceitou a política de cookies
 				checkCookiesAllowed();
 				break;
 			case '4':
-				//Define as cores caso o usuário tenha definido
+				// Define as cores caso o usuário as tenha definido
 				colorSet();
 				break;
 		}
 	}
 
-	//Depois de tudo carregado carrega o body
+	// Depois de tudo completamente carregado carrega o corpo "body"
 	waitCompleteLoad();
 }
+
+
+
+// #endregion
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// -------------------------------------------------------------
