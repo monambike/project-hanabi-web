@@ -1,9 +1,21 @@
 <?php
+	// LOGIN DE USUÁRIO
+	// -------------------------------------------------------------
+	// Descrição:
+	// Efetua o login do usuário.
+	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+	// Estabelece a conexão com o banco
 	include("connection.php");
 
+	// Recebe o usuário
 	$login = htmlentities($_POST["login"]);
+	// Recebe a senha
 	$password = htmlentities($_POST["password"]);
 
+	// Tenta achar no banco
 	$getuser = "
 		SELECT
 			*
@@ -15,6 +27,7 @@
 	$result = mysqli_query($con, $getuser);
 	$rows = mysqli_num_rows($result);
 
+	// Se houver no banco, faz o login do usuário
 	if($rows > 0){
 		session_name('userHanabi_online');
 		session_start();
@@ -35,6 +48,7 @@
 		}
 		$_SESSION['password'] = $password;
 
+		// Procura as cores definidas pelo usuário com base no id dele
 		$search = "
 		    SELECT
 		    	settingsColor1,
@@ -49,10 +63,14 @@
 			WHERE
 				userId='".$_SESSION['id']."'
 		";
+
+		// Executa a Query
 		$query = mysqli_query($con, $search);
 
+		// Passa os valores que estão no banco para as variáveis locais,
+		// para garantir que ao logar o usuário receba na hora as  cores
+		// corretas
 		while ($data = mysqli_fetch_array($query)) {
-			//Garante que ao logar receba as cores certas
 			echo
 			"<script type='text/javascript'>
 				localStorage.setItem('color1', '".$data["settingsColor1"]."');
@@ -66,8 +84,12 @@
 			</script>";
 		}
 
+		// Volta para a página anterior
 		echo '<script> window.history.back(); </script>';
-	}else{
+	}
+	// Se não for possível fazer o login
+	else{
+		// Exibe uma mensagem de erro e volta para a página anterior
 		echo
 		"<script type='text/javascript'>
 			alert('Usuário e/ou Senha incorretos.');
@@ -75,5 +97,11 @@
 		</script>";
 	}
 
+	// Para a chamada do SQL
 	mysqli_close($con);
+
+
+
+	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	// -------------------------------------------------------------
 ?>
