@@ -89,6 +89,8 @@ Y claro, mi amiga **Ado** que ofereció mucho suporte durante el desarrollar de 
 
 ## 日本語 - [(トップに戻る)](#PROJECT-HANABI)
 
+## WEBSITE IMAGES
+
 ![Captura de tela 2023-05-29 211425](https://github.com/monambike/project-hanabi-web/assets/35270174/be541760-22e6-4375-96f9-389eb4260cfd)
 ![Captura de tela 2023-05-29 211329](https://github.com/monambike/project-hanabi-web/assets/35270174/1abeac08-8b12-40dc-92cd-84185e190992)
 ![Captura de tela 2023-05-29 211312](https://github.com/monambike/project-hanabi-web/assets/35270174/907a1f00-a078-4abc-b870-964b2a7a01d3)
