@@ -88,3 +88,13 @@ A **Lacobus** y **hugocsl** por haber tenido respondido mi pregunta in StackOver
 Y claro, mi amiga **Ado** que ofereció mucho suporte durante el desarrollar de este proyecto :) (muito obrigado, fofinha!).
 
 ## 日本語 - [(トップに戻る)](#PROJECT-HANABI)
+
+![Captura de tela 2023-05-29 211425](https://github.com/monambike/project-hanabi-web/assets/35270174/be541760-22e6-4375-96f9-389eb4260cfd)
+![Captura de tela 2023-05-29 211329](https://github.com/monambike/project-hanabi-web/assets/35270174/1abeac08-8b12-40dc-92cd-84185e190992)
+![Captura de tela 2023-05-29 211312](https://github.com/monambike/project-hanabi-web/assets/35270174/907a1f00-a078-4abc-b870-964b2a7a01d3)
+![Captura de tela 2023-05-29 211229](https://github.com/monambike/project-hanabi-web/assets/35270174/b8b70cb0-9550-42a3-ad67-595e910f7427)
+![Captura de tela 2023-05-29 210542](https://github.com/monambike/project-hanabi-web/assets/35270174/c509df79-3990-4b27-b532-09e38d470417)
+![Captura de tela 2023-05-29 210551](https://github.com/monambike/project-hanabi-web/assets/35270174/f42bed6a-799a-4b0e-90db-8acf9b400601)
+![Captura de tela 2023-05-29 210952](https://github.com/monambike/project-hanabi-web/assets/35270174/3625c8b1-f024-46f1-af26-2e40dbf75b1f)
+![Captura de tela 2023-05-29 210509](https://github.com/monambike/project-hanabi-web/assets/35270174/bd8521e8-b888-4a77-ab30-501645054aa1)
+![Captura de tela 2023-05-29 210526](https://github.com/monambike/project-hanabi-web/assets/35270174/25aa8370-3055-4b6b-9134-e520bf5754c9)
