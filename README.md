@@ -103,6 +103,17 @@ Y claro, mi amiga **Ado** que ofereció mucho suporte durante el desarrollar de 
 ![Captura de tela 2023-05-29 210542](https://github.com/monambike/project-hanabi-web/assets/35270174/c509df79-3990-4b27-b532-09e38d470417)
 ![Captura de tela 2023-05-29 210551](https://github.com/monambike/project-hanabi-web/assets/35270174/f42bed6a-799a-4b0e-90db-8acf9b400601)
 
+## Art Page
+![Captura de tela 2023-05-29 210648](https://github.com/monambike/project-hanabi-web/assets/35270174/9f8e53eb-bdb6-49c5-97c4-6e2d846595e4)
+![Captura de tela 2023-05-29 210700](https://github.com/monambike/project-hanabi-web/assets/35270174/7949f23c-0a38-4baf-a598-dae0d1e7b99b)
+![Captura de tela 2023-05-29 210638](https://github.com/monambike/project-hanabi-web/assets/35270174/e345a3f2-5a80-4513-a285-f31db9137b97)
+
+## About Page
+
+![Captura de tela 2023-05-29 210718](https://github.com/monambike/project-hanabi-web/assets/35270174/b93a75cd-8d8d-47d9-8ab7-5cde2601a3d8)
+![Captura de tela 2023-05-29 210732](https://github.com/monambike/project-hanabi-web/assets/35270174/0e4c8de7-25cd-41d7-bf08-351b0859fbdc)
+
+
 ## Profile Page
 
 ![Captura de tela 2023-05-29 211127](https://github.com/monambike/project-hanabi-web/assets/35270174/47332863-6759-464d-9330-bb08e4e6e300)
@@ -122,3 +133,4 @@ Y claro, mi amiga **Ado** que ofereció mucho suporte durante el desarrollar de 
 
 ![Captura de tela 2023-05-29 210952](https://github.com/monambike/project-hanabi-web/assets/35270174/c11d1810-60fb-41fd-9475-f3c2ac489fb9)
 ![Captura de tela 2023-05-29 211038](https://github.com/monambike/project-hanabi-web/assets/35270174/2cd4e45c-a5cf-4295-b5c1-1e49d5fb5910)
+![Captura de tela 2023-05-29 210744](https://github.com/monambike/project-hanabi-web/assets/35270174/901bd759-7003-42e5-8540-d9962369ff09)
