@@ -108,7 +108,6 @@ Y claro, mi amiga **Ado** que ofereció mucho suporte durante el desarrollar de 
 ![Captura de tela 2023-05-29 211127](https://github.com/monambike/project-hanabi-web/assets/35270174/47332863-6759-464d-9330-bb08e4e6e300)
 ![Captura de tela 2023-05-29 211148](https://github.com/monambike/project-hanabi-web/assets/35270174/69e6f726-5618-4967-81cb-ce90e3c33093)
 ![Captura de tela 2023-05-29 211209](https://github.com/monambike/project-hanabi-web/assets/35270174/c153d343-8869-4321-bdeb-7b437e5ed3cc)
-![Captura de tela 2023-05-29 211038](https://github.com/monambike/project-hanabi-web/assets/35270174/2cd4e45c-a5cf-4295-b5c1-1e49d5fb5910)
 ![Captura de tela 2023-05-29 211105](https://github.com/monambike/project-hanabi-web/assets/35270174/1c8e37c8-47a2-414d-ac34-a0ab4d371e60)
 ![Captura de tela 2023-05-29 211120](https://github.com/monambike/project-hanabi-web/assets/35270174/f8c09afe-caff-4a27-a433-d8adf09aa09b)
 
@@ -117,8 +116,9 @@ Y claro, mi amiga **Ado** que ofereció mucho suporte durante el desarrollar de 
 ![Captura de tela 2023-05-29 211329](https://github.com/monambike/project-hanabi-web/assets/35270174/1abeac08-8b12-40dc-92cd-84185e190992)
 ![Captura de tela 2023-05-29 211312](https://github.com/monambike/project-hanabi-web/assets/35270174/907a1f00-a078-4abc-b870-964b2a7a01d3)
 ![Captura de tela 2023-05-29 211229](https://github.com/monambike/project-hanabi-web/assets/35270174/b8b70cb0-9550-42a3-ad67-595e910f7427)
+![Captura de tela 2023-05-29 211048](https://github.com/monambike/project-hanabi-web/assets/35270174/d16534dc-ba11-434f-8178-6b14b5f34b20)
 
 ### Profile Login and Signup
 
 ![Captura de tela 2023-05-29 210952](https://github.com/monambike/project-hanabi-web/assets/35270174/c11d1810-60fb-41fd-9475-f3c2ac489fb9)
-![Captura de tela 2023-05-29 211048](https://github.com/monambike/project-hanabi-web/assets/35270174/d16534dc-ba11-434f-8178-6b14b5f34b20)
+![Captura de tela 2023-05-29 211038](https://github.com/monambike/project-hanabi-web/assets/35270174/2cd4e45c-a5cf-4295-b5c1-1e49d5fb5910)
