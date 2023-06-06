@@ -105,9 +105,9 @@ Y claro, mi amiga **Ado** que ofereció mucho suporte durante el desarrollar de 
 
 ## Art Page
 
-![Captura de tela 2023-05-29 210638](https://github.com/monambike/project-hanabi-web/assets/35270174/e345a3f2-5a80-4513-a285-f31db9137b97)
 ![Captura de tela 2023-05-29 210648](https://github.com/monambike/project-hanabi-web/assets/35270174/9f8e53eb-bdb6-49c5-97c4-6e2d846595e4)
 ![Captura de tela 2023-05-29 210700](https://github.com/monambike/project-hanabi-web/assets/35270174/7949f23c-0a38-4baf-a598-dae0d1e7b99b)
+![Captura de tela 2023-05-29 210638](https://github.com/monambike/project-hanabi-web/assets/35270174/e345a3f2-5a80-4513-a285-f31db9137b97)
 
 ## About Page
 
