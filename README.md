@@ -2,6 +2,8 @@
 
 Note: If you want to download it and test in your machine. The site won't work if you don't get the database and build it by complete properly.
 
+You can find the database repository [here](https://github.com/monambike/project-hanabi-database/).
+
 ## CHOOSE LANGUAGE
 | [PORTUGUÊS](#PORTUGUÊS---VOLTAR-AO-TOPO) | [ENGLISH](#ENGLISH---GO-TO-THE-TOP) | [ESPAÑOL](#ESPAÑOL---IR-AL-INICIO) | [日本語](#日本語---トップに戻る) |
 |-|-|-|-|
