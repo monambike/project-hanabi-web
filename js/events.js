@@ -371,13 +371,15 @@ function checkCookiesAllowed(){
 	var terms = getCookie("terms_of_cookie");
 	var divcookie = document.getElementById("div_cookies");
 
-	//Se o usuário não concordou com os cookies
-	if (terms === ""){
-		divcookie.style.display = "block";
-	//Se o usuário concordou com os cookies
-	}else{
-		divcookie.style.display = "none";
-	}
+  if (divcookie) {
+    //Se o usuário não concordou com os cookies
+    if (terms === ""){
+      divcookie.style.display = "block";
+    //Se o usuário concordou com os cookies
+    }else{
+      divcookie.style.display = "none";
+    }
+  }
 }
 
 function bodyLoadFunction(lang, locate, type){

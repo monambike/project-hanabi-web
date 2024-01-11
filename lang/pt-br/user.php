@@ -447,7 +447,7 @@
 			</div>
 		</div>
 		<div id="div_cookies" style="display: none;">
-			Utilizando o nosso site e continuando a navegar vamos entender que você aceita a nossa política de <a href="http://localhost/projecthanabi_web/info/cookies.html" target="_blank">cookies</a>. Caso queira saber mais sobre <a href="http://localhost/projecthanabi_web/info/cookies.html" target="_blank">cookies</a>, como usamos e a nossa política clique no link exibido.</a>
+			Utilizando o nosso site e continuando a navegar vamos entender que você aceita a nossa política de <a href="../../info/cookies.html" target="_blank">cookies</a>. Caso queira saber mais sobre <a href="../../info/cookies.html" target="_blank">cookies</a>, como usamos e a nossa política clique no link exibido.</a>
 			<br>
 			<br>
 			<button class="btn_button" onmousedown="setCookie('terms_of_cookie', 'allowed', 365)">Fechar</button>
