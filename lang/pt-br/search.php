@@ -179,26 +179,28 @@
 					<!--Logado-->
 					<div id="div_login_yes">
 						<?php
-							while ($data = mysqli_fetch_array($result)) {
-								if($data['userPhoto']){
-									echo '<a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)"><img style="background-image: url(data:image/jpg;charset=utf8;base64,'.base64_encode($data['userPhoto']).')"></a>';
-								}else{
+              if (!is_null($result)){
+                while ($data = mysqli_fetch_array($result)) {
+                  if($data['userPhoto']){
+                    echo '<a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)"><img style="background-image: url(data:image/jpg;charset=utf8;base64,'.base64_encode($data['userPhoto']).')"></a>';
+                  }else{
 
-									echo '<a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)"><img style="background-image: url(../../images/usericon.png)"></a>';
+                    echo '<a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)"><img style="background-image: url(../../images/usericon.png)"></a>';
 
-								}
+                  }
 
-								echo '
-								<br>
-								<br>
-								<a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)"><span>'.htmlentities($data['userName']).'</span></a>
-								<br>
-								<a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)"><span>('.htmlentities($data['userUsername']).')</span></a>
-								<br>
-								<br>
-								<hr>
-								<a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)">Meu Perfil</a>';
-							}
+                  echo '
+                  <br>
+                  <br>
+                  <a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)"><span>'.htmlentities($data['userName']).'</span></a>
+                  <br>
+                  <a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)"><span>('.htmlentities($data['userUsername']).')</span></a>
+                  <br>
+                  <br>
+                  <hr>
+                  <a onmousedown="movelink(`user.php?user='.htmlentities($data['userUsername']).'`)">Meu Perfil</a>';
+                }
+              }
 						?>
 						<br>
 						<br>
