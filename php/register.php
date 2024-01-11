@@ -68,10 +68,10 @@
 		$query = mysqli_query($con, $insert);
 
 		//Direciona para a página correta
-		/*echo
+		echo
 		'<script>
 			window.open("../lang/" + localStorage.getItem("language") + "/home.php", "_self");
-		</script>';*/
+		</script>';
 	}
 
 	mysqli_close($con);
