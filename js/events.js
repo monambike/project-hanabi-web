@@ -48,6 +48,8 @@ function movelink(navigation){
 			window.open('lang/' + lang.value + '/home.php', '_self');
 		}else if(navigation == 'return'){
 			window.history.back();
+    } else if (navigation == 'logoff') {
+			window.open('../../php/logoff.php', '_self');
 		}else{
 			window.open(navigation, '_self');
 		}

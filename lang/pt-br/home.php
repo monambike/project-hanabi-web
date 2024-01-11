@@ -218,7 +218,7 @@
 						<a onmousedown="movelink('chat.php')">Entrar no Chat Público</a>
 						<br>
 						<hr>
-						<a id="txt_logoff" onmousedown="movelink('logoff.php')">Fazer Logoff</a>
+						<a id="txt_logoff" onmousedown="movelink('logoff')">Fazer Logoff</a>
 					</div>
 				</div>
 				<section>
