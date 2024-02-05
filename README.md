@@ -146,3 +146,7 @@ Y claro, mi amiga **Ado** que ofereció mucho suporte durante el desarrollar de 
 ![Captura de tela 2023-05-29 210952](https://github.com/monambike/project-hanabi-web/assets/35270174/c11d1810-60fb-41fd-9475-f3c2ac489fb9)
 ![Captura de tela 2023-05-29 211038](https://github.com/monambike/project-hanabi-web/assets/35270174/2cd4e45c-a5cf-4295-b5c1-1e49d5fb5910)
 ![Captura de tela 2023-05-29 210744](https://github.com/monambike/project-hanabi-web/assets/35270174/901bd759-7003-42e5-8540-d9962369ff09)
+
+# Contact
+
+You can find me on likedin by here [linkedin.com/in/monambike/](https://www.linkedin.com/in/monambike/). If you want to see videos about my work you can check my YouTube channel [youtube.com/@monambike_portfolio](https://www.youtube.com/@monambike_portfolio) and if you want to see my artworks you can check at my instagram [instagram.com/monambike_portfolio](https://www.instagram.com/monambike_portfolio).
