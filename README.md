@@ -13,6 +13,12 @@ Note: If you want to download it and test in your machine. The site won't work i
 
 You can find the database repository [here](https://github.com/monambike/project-hanabi-database/).
 
+## YouTube Video Showcase
+
+Click here to see my [YouTube video](https://www.youtube.com/watch?v=GkWr1IOZPPI) showcasing the website with my implementations.
+
+![projecthanabi](https://github.com/user-attachments/assets/1164724a-dc1f-4d19-b50b-288cfac7189c)
+
 ## CHOOSE LANGUAGE
 | [PORTUGUÊS](#PORTUGUÊS---VOLTAR-AO-TOPO) | [ENGLISH](#ENGLISH---GO-TO-THE-TOP) | [ESPAÑOL](#ESPAÑOL---IR-AL-INICIO) | [日本語](#日本語---トップに戻る) |
 |-|-|-|-|
